@@ -1,0 +1,207 @@
+div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
+	overflow-wrap: normal;
+    word-wrap: normal;
+    -ms-word-break: normal;
+    word-break: normal;
+    word-break: normal;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+    page-break-inside: avoid;
+}
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+a {
+	@include transition(all ease-out .3s);
+}
+.clear:before, .clear:after { content: " "; display: table; }
+.clear { *zoom: 1; }
+.clear {clear: both;}
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0px auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo {
+	width: 200px;
+	margin: 0 auto;
+	@media screen and (min-width: $tabwidth) {
+		width: 300px;
+		margin: 0 0;
+		float: left;
+	}
+	a,img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+}
+.site-header {
+	position: relative;
+	z-index: 200;
+	.wrapper {
+		padding: 5px 0;
+		@media screen and (min-width: $tabwidth) {
+			@include flexbox();
+			@include flexbox-wrap(wrap);
+			@include flexbox-direction(row);
+			@include flexbox-align-items(center);
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.left {
+			width: 100%;
+			float: left;
+			margin: 10px 0 5px;
+			@media screen and (min-width: $tabwidth) {
+				width: 30%;
+				margin: 0 0;
+			}
+		}
+		.right {
+			width: 100%;
+			float: left;
+			@media screen and (min-width: $tabwidth) {
+				width: 70%;
+			}
+		}
+	}
+}
+.site-footer {
+	background: $color-dark-teal;
+	color: #FFF;
+	font-size: .8rem;
+	font-weight: 300;
+	line-height: 1.5;
+	padding: 20px 0;
+	a {
+		text-decoration: none;
+		color: #FFF;
+		&:hover {
+			color: $color-teal;
+		}
+	}
+	.wrapper {
+		@include flexbox();
+		@include flexbox-wrap(wrap);
+		@include flexbox-direction(row);
+		@include flexbox-align-items(center);
+	}
+	.col.left {
+		width: 100%;
+		margin-bottom: 20px;
+		@media screen and (min-width: $tabwidth) {
+			width: 70%;
+			margin: 0 0;
+		}
+	}
+	.col.right {
+		width: 100%;
+		@media screen and (min-width: $tabwidth) {
+			width: 30%;
+			margin: 0 0;
+		}
+	}
+	.company-info {
+		text-align: center;
+		@media screen and (min-width: $tabwidth) {
+			text-align: left;
+		}
+		.info {
+			display: inline-block;
+			position: relative;
+			width: 100%;
+			padding: 2px 0;
+			@media screen and (min-width: $tabwidth) {
+				width: auto;
+    			padding: 0 10px 0 17px;
+			}
+		}
+		.info:before {
+			@media screen and (min-width: $tabwidth) {
+				content:"";
+				display: block;
+				width: 7px;
+				height: 1px;
+				background: #FFF;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		.info:first-child {
+			@media screen and (min-width: $tabwidth) {
+				padding-left: 0;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
+ul#footer-menu {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 0;
+	list-style: none;
+	width: 100%;
+	text-align: center;
+	@media screen and (min-width: $tabwidth) {
+		width: auto;
+		float: right;
+		padding-left: 20px;
+		margin: 0 0;
+	}
+	li {
+		display: inline-block;
+		@media screen and (min-width: $tabwidth) {
+			float: left;
+		}
+	}
+	a {
+		display: inline-block;
+		text-decoration: none;
+		padding: 2px 10px;
+		color: #FFF;
+		&:hover {
+			color: $color-teal;
+		}
+	}
+}
