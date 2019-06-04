@@ -1,14 +1,17 @@
 <?php
 $page_id = get_homepage_id();
-$banner = get_field('image',$page_id);
+$banners = get_field('slider_image',$page_id);
 $tagline = get_field('tagline',$page_id);
-if($banner) { ?>
-<div class="hero clear">
-	<?php if ($tagline) { ?>
-	<div class="caption">
-		<div class="text"><?php echo $tagline?></div>
-	</div>
+$count = ($banners) ? count($banners) : 0;
+$slideClass = ($count>1) ? 'slideshow':'no-slide';
+if($banners) { ?>
+<div class="slides-wrap <?php echo $slideClass ?>">
+ 	<ul class="sliders">
+	<?php foreach ($banners as $b) { ?>
+		<li class="slide">
+			<div class="slide-image" style="background-image:url('<?php echo $b['url'] ?>');"></div>
+		</li>
 	<?php } ?>
-	<div class="h-image" style="background-image:url('<?php echo $banner['url'] ?>');"></div>
+	</ul>
 </div>
 <?php } ?>

@@ -41,8 +41,9 @@ jQuery(document).ready(function ($) {
 	*	Flexslider
 	*
 	------------------------------------*/
-	$('.flexslider').flexslider({
+	$('.slideshow').flexslider({
 		animation: "slide",
+		selector: ".sliders > li",
 	}); // end register flexslider
 	
 	/*

@@ -17,6 +17,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
 <script defer src="<?php bloginfo( 'template_url' ); ?>/assets/svg-with-js/js/fontawesome-all.js"></script>
 <?php wp_head(); ?>
 </head>
@@ -26,7 +27,27 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>
 
 	<header id="masthead" class="site-header clear" role="banner">
-		<div class="wrapper">
+
+		<?php
+			$p_args = array('taxonomy'=>'portfolio_categories','parent'=>0,'hide_empty'=>false); 
+			$portfolio_categories = get_categories($p_args); 
+		?>
+		<div class="top-info">
+			<div class="wrapper">
+				<?php if ($portfolio_categories) { ?>
+					<ul class="cats">
+					<?php foreach ($portfolio_categories as $cat) { 
+						$catname = $cat->name;
+						$link = get_term_link($cat); ?>
+						<li><a href="<?php echo $link ?>"><?php echo $catname; ?></a></li>
+					<?php } ?>
+					</ul>
+				<?php } ?>
+			</div>
+		</div>
+
+
+		<div class="wrapper navi">
 			<div class="left">
 				<?php if( get_custom_logo() ) { ?>
 					<?php if ( is_home() ) { ?>

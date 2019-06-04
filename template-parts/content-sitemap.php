@@ -1,5 +1,5 @@
 <?php  
-$menuName='Primary Menu';
+$menuName='Main Menu';
 $sortbyMenu=false;
 $links = generate_sitemap($menuName,$sortbyMenu);
 if($links) { ?>
