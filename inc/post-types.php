@@ -12,6 +12,14 @@ function js_custom_init() {
             'menu_icon' => 'dashicons-portfolio',
             'supports'  => array('title','editor','thumbnail')
         ),
+         array(
+            'post_type' => 'services',
+            'menu_name' => 'Services',
+            'plural'    => 'Services',
+            'single'    => 'Service',
+            'menu_icon' => 'dashicons-laptop',
+            'supports'  => array('title','editor','thumbnail')
+        ),
         array(
             'post_type' => 'team',
             'menu_name' => 'Team',
