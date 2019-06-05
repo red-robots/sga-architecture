@@ -1937,6 +1937,7 @@ h2{font-size:25px;letter-spacing:1px}
 .page-link-list a:hover{color:#888b8d}
 .margintop{margin-top:30px}
 .head1{font-size:18px;font-weight:400;color:#888b8d;text-transform:uppercase;margin:0 0 20px;padding-bottom:10px;border-bottom:1px solid #888b8d}
+.portfolio-content{min-height:25em}
 .portfolio-content .col-left{width:100%;margin-bottom:20px}
 @media screen and (min-width:600px){.portfolio-content .col-left{width:25%;float:left;margin-bottom:0}
 }@media screen and (min-width:600px){.portfolio-content .col-right{width:70%;float:right}
