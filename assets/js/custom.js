@@ -46,6 +46,11 @@ jQuery(document).ready(function ($) {
 		selector: ".sliders > li",
 	}); // end register flexslider
 	
+	$('.project-slideshow').flexslider({
+		animation: "fade",
+		selector: ".sliders > li",
+	});
+
 	/*
 	*
 	*	Colorbox
@@ -72,11 +77,22 @@ jQuery(document).ready(function ($) {
 	------------------------------------*/
 	new WOW().init();
 
-	$(document).on("click","#toggleMenu",function(){
+	$(document).on("click","#toggleMenu",function(e){
+		e.preventDefault();
 		$(this).toggleClass('open');
 		$('.mobile-navigation').toggleClass('open');
 		$('body').toggleClass('open-mobile-menu');
 		$("#site-navigation").toggleClass('open-menu');
 	});
 
+	$(document).on("click","#mobileCatSelect",function(e){
+		e.preventDefault();
+		$("ul.categories").toggleClass('open');
+	});
+
+	if( $("ul.categories ul li.active").length > 0 ) {
+		$("ul.categories ul li.active").each(function(){
+			$(this).parents('li.catlink').addClass('active');
+		});
+	}
 });// END #####################################    END

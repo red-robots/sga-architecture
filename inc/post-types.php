@@ -146,9 +146,11 @@ function set_custom_cpt_columns($columns) {
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
     
-    if($post_type=='events') {
+    if($post_type=='portfolio') {
+        unset( $columns['taxonomy-portfolio_categories'] );
         unset( $columns['date'] );
-        $columns['photo'] = __( 'Image', 'bellaworks' );
+        $columns['photo'] = __( 'Main Photo', 'bellaworks' );
+        $columns['taxonomy-portfolio_categories'] = __( 'Categories', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
     
@@ -162,15 +164,15 @@ function custom_post_column( $column, $post_id ) {
     $query = isset($wp_query->query) ? $wp_query->query : '';
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
-    if($post_type=='events') {
+    if($post_type=='portfolio') {
         switch ( $column ) {
             case 'photo' :
                 $thumbnail_id = get_post_thumbnail_id($post_id);
                 $img = wp_get_attachment_image_src($thumbnail_id,'small-thumbnail');
                 $img_src = ($img) ? $img[0] : '';
-                $the_photo = '<span class="tmphoto" style="display:inline-block;width:50px;height:50px;background:#e2e1e1;text-align:center;">';
+                $the_photo = '<span class="tmphoto" style="display:inline-block;width:70px;height:50px;background:#e2e1e1;text-align:center;">';
                 if($img_src) {
-                   $the_photo .= '<img src="'.$img_src.'" alt="" style="width:100%;height:auto" />';
+                   $the_photo .= '<span style="background:url('.$img_src.') center no-repeat;background-size:cover;display:block;width:100%;height:100%;"></span>';
                 } else {
                     $the_photo .= '<i class="dashicons dashicons-format-image" style="font-size:23px;position:relative;top:14px;left:-1px;opacity:0.2;"></i>';
                 }

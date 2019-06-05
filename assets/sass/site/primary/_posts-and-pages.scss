@@ -327,31 +327,33 @@ h2 {
 }
 .portfolio-content {
 	.col-left {
-		width: 30%;
+		width: 100%;
 		margin-bottom: 20px;
 		@media screen and (min-width: $tabwidth) {
-			width: 28%;
+			width: 25%;
 			float: left;
 			margin-bottom: 0;
 		}
 	}
 	.col-right {
 		@media screen and (min-width: $tabwidth) {
-			width: 67%;
+			width: 70%;
 			float: right;
 		}
 	}
 }
 
 .masonry-wrapper {
-	columns: 2;
-	@media screen and (min-width: $tabwidth) {
-		columns: 2;
-	}
-	@media screen and (min-width: $midwidth) {
-		columns: 3;
-		column-gap: 15px;
-	}
+	width: 100%;
+	float: left;
+	// columns: 2;
+	// @media screen and (min-width: $tabwidth) {
+	// 	columns: 2;
+	// }
+	// @media screen and (min-width: $midwidth) {
+	// 	columns: 3;
+	// 	column-gap: 15px;
+	// }
 }
 .masonry-item {
     display: inline-block;
@@ -360,11 +362,30 @@ h2 {
     overflow: hidden;
 }
 .project-list {
+	.flexrow {
+		@media screen and (min-width: $tabwidth) {
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
 	.proj-info {
 		position: relative;
-		height: 200px;
+		height: 175px;
 		width: 100%;
 		margin: 7px 0;
+		width: 100%;
+		margin: 15px 0;
+		@include transition(all ease-in-out .3s);
+		@media screen and (min-width: $tabwidth) {
+			height: 180px;
+			width: 50%;
+			padding: 10px;
+			margin: 0 0;
+		}
+		@media screen and (min-width: $deskwidth) {
+			height: 230px;
+			width: 33.333%;
+		}
 	}
 	.proj-image {
 		display: block;
@@ -375,16 +396,364 @@ h2 {
 		background-repeat: no-repeat;
 		@include transition(all ease-in-out .3s);
 	}
-	.info {
+	.proj-block {
 		cursor: pointer;
 		display: block;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+		position: relative;
+		cursor: pointer;
 	}
-	.info:hover {
+	.proj-block:hover {
 		.proj-image {
 			transform: scale(1.1);
 		}
 	}
+	.caption {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,.65);
+		color: #FFF;
+		z-index: 5;
+		opacity: 0;
+		visibility: hidden;
+		@include flexbox();
+		@include flexbox-wrap(wrap);
+		@include flexbox-align-items(center);
+		@include flexbox-justify(center);
+		@include transition(all ease-out .3s);
+		.wrap {
+			display: block;
+			width: 100%;
+			padding: 15px;
+			text-align: center;
+			line-height: 1.1;
+			margin-top: 10%;
+			@include transition(all ease-out .3s);
+		}
+		.projname {
+			display: block;
+			width: 100%;
+			font-size: 15px;
+			line-height: 1.3;
+			text-transform: uppercase;
+			color: $color_lime;
+			margin-bottom: 3px;
+		}
+		.opt {
+			display: inline-block;
+			font-size: 13px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 1.2;
+			padding: 0 8px 0 7px;
+			word-wrap: break-word;
+		}
+		.opt:last-child {
+			border-right: 0;
+		}
+	}
+	.proj-block:hover {
+		.caption {
+			opacity: 1;
+			visibility: visible;
+			.wrap {
+				margin-top: 0;
+				transition-delay: .2s;
+			}
+		}
+	}
 }
+.portfolio-content {
+	padding-bottom: 50px;
+}
+.portfolio-categories {
+	ul {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		position: relative;
+	}
+	li {
+		position: relative;
+		z-index: 5;
+	}
+	a {
+		display: inline-block;
+		text-decoration: none;
+		position: relative;
+		color: $color_grey;
+	}
+	a.parent {
+		text-transform: uppercase;
+		padding: 5px 0;
+		&:hover {
+			color: $color_lime;
+		}
+	}
+	ul.categories > li:hover > a {
+		color: $color_lime;
+	}
+	a.child {
+		display: block;
+		padding:3px 10px 3px 23px;
+		font-size: 14px;
+		background: transparent;
+		span {
+			position: relative;
+			z-index: 5;
+		}
+		&:before {
+			content:"";
+			display: block;
+			width: 5px;
+			height: 5px;
+			border-radius: 100%;
+			background: $color_grey;
+			position: absolute;
+			top: 11px;
+			left: 10px;
+			z-index: 2;
+		}
+		&:after {
+			content:"";
+			display: block;
+			width: 0;
+			height: 100%;
+			background: $color_dark_grey;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include transition(all ease-out .3s);
+		}
+	}
+	ul.children a.child:hover,
+	ul.children li.active a.child {
+		color: #FFF;
+		&:before {
+			background: $color_lime;
+		}
+		&:after {
+			width: 100%;
+		}
+	}
+	li.active a.parent {
+		color: $color_lime;
+	}
+	ul.children {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	ul.categories:after {
+		content:"";
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 1px solid $color_lime;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@media screen and (min-width: $tabwidth) {
+			display: none;
+		}
+	}
+	ul.categories .catlink {
+		display: none;
+		padding: 0 15px;
+		@media screen and (min-width: $tabwidth) {
+			display: block;
+			padding: 0 0;
+		}
+	}
+	ul.categories.open {
+		padding-bottom: 13px;
+		.catlink {
+			display: block;
+		}
+	}
+	
+	.mobile-cat-label {
+		display: block;
+		text-align: center;
+		background: $color_lime;
+		cursor: pointer;
+		a {
+			display: block;
+			padding: 5px 10px;
+		}
+		@media screen and (min-width: $tabwidth) {
+			display: none;
+		}
+		span.txt {
+			display: inline-block;
+			text-transform: uppercase;
+			color: #FFF;
+		}
+		span.icon {
+			position: relative;
+			left: 5px;
+		}
+	}
+	ul.categories.open .mobile-cat-label {
+		margin-bottom: 15px;
+	}
+}
+.project-sliders {
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+	@media screen and (min-width: $tabwidth) {
+		height: 400px;
+	}
+	.project-images {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	ul.sliders {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.slide {
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+	}
+	.ps-image {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.flex-control-nav {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		bottom: 0;
+		z-index: 100;
+	}
+	.flex-control-nav li {
+		margin: 0 4px;
+	}
+	.flex-control-nav li a:hover {
+		background: rgba(255,255,255,.5);
+	}
+	.flex-control-paging li a {
+		width: 10px;
+		height: 10px;
+		background: transparent;
+		border: 1px solid #FFF;
+		&.flex-active,
+		&.flex-active:hover {
+			background: $color_lime;
+		}
+	}
+
+}
+
+.project-details {
+	padding-top: 30px;
+	font-size: 14px;
+	width: 100%;
+	float: left;
+	position: relative;
+	.project-inner {
+		position: relative;
+		width: 100%;
+		float: left;
+	}
+	@media screen and (min-width: $tabwidth) {
+		.project-inner.two-column:after {
+			content:"";
+			display: block;
+			width: 22%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-right: 1px solid $color_dark_grey;
+		}
+	}
+	.projcol {
+		position: relative;
+		z-index: 10;
+	}
+	.options {
+		@media screen and (min-width: $tabwidth) {
+			width: 22%;
+			float: left;
+		}
+	}
+	.details.half {
+		@media screen and (min-width: $tabwidth) {
+			width: 74%;
+			float: right;
+		}
+	}
+	.projectname {
+		color: $color_lime;
+		font-size: 18px;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin: 0 0 5px;
+	}
+	.details p {
+		margin-top: 0;
+	}
+	.option {
+		margin-bottom: 15px;
+	}
+	.option:last-child {
+		margin-bottom: 0;
+	}
+	.o-name {
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $color_lime;
+	}
+	.o-info {
+		font-size: 12px;
+	}
+}
+
+.pagination-links {
+	margin-top: 15px;
+	text-align: right;
+	width: 100%;
+    float: left;
+	span,a {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 14px;
+		line-height: 14px;
+		padding: 6px 10px;
+		margin-left: 4px;
+	}
+	a {
+		background: #bfbfbf;
+		color: #FFF;
+		&:hover {
+			opacity: .45;
+		}
+	}
+	.current {
+		color: #FFF;
+		background: $color_lime;
+	}
+}
+
+
