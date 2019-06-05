@@ -20,10 +20,10 @@ get_header(); ?>
 			$post_id = get_the_ID();
 			$post_thumbnail_id = get_post_thumbnail_id( $post_id );
 			$img = wp_get_attachment_image_src($post_thumbnail_id,'medium_large'); 
-			$galleries = get_field('project_images');
+			$galleries = get_field('gallery');
 			$location = get_field('location');
 			$client = get_field('client');
-			$dimension = get_field('dimension');
+			$dimension = get_field('square_footage');
 			$budget = get_field('budget');
 			$projectOpts = array($location,$client,$dimension,$budget);
 			$hasOptions = ($projectOpts && array_filter($projectOpts)) ? true:false;
