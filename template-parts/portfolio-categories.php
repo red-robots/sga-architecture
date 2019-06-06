@@ -27,6 +27,7 @@ $args = array(
 		'parent'=>0
 	);
 $categories = get_categories($args);
+
 if($categories) { ?>
 <div class="portfolio-categories">
 	<ul class="categories">

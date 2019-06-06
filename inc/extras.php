@@ -385,3 +385,36 @@ function get_homepage_id() {
     $result = $wpdb->get_row( "SELECT * FROM $wpdb->posts WHERE post_status = 'private' AND post_name='homepage'" );
     return ($result) ? $result->ID : 0;
 }
+
+function get_posts_by_year($posttype='post') {
+  global $wpdb;
+  $categories = array();
+  $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM $wpdb->posts WHERE post_type = '".$posttype."' AND post_status = 'publish' GROUP BY year DESC" ); 
+  if($years) {
+    foreach($years as $y) {
+      $yr = $y->year; 
+      $months = $wpdb->get_results( "SELECT MONTH(post_date) AS month, count(*) as count FROM $wpdb->posts WHERE post_type = '".$posttype."' AND post_status = 'publish' AND YEAR(post_date)='".$yr."' GROUP BY month DESC" ); 
+      $month_list = array();
+      if($months) {
+        foreach($months as $m) {
+          $monthNum = $m->month;
+          $dateObj   = DateTime::createFromFormat('!m', $monthNum);
+          $monthName = $dateObj->format('F'); // March
+          $mArr = array(
+              'monthNum' => $monthNum,
+              'monthName'=> $monthName
+            );
+          $month_list[] = $mArr;
+        }
+        $arr = array(
+          'year'    =>  $yr,
+          'months'  =>  $month_list
+        );
+        $categories[] = $arr;
+      }
+    }
+  }
+
+  return $categories;
+  
+}
