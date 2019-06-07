@@ -2032,14 +2032,15 @@ h2{font-size:25px;letter-spacing:1px}
 .lastest_post_image .excerpt a{color:#FFF}
 .lastest_post_image a.readmore{margin-top:10px;display:inline-block;text-decoration:none;color:#93c90e;font-weight:500}
 .lastest_post_image a.readmore:hover{color:#FFF}
-.post-items-wrap{width:100%;float:left}
+.post-items-wrap{width:100%;float:left;padding-top:10px}
 .post-items-wrap .itemrows{margin-left:-10px;margin-right:-10px}
 .post-items-wrap .pagination-links{margin-top:25px}
-.post-item-block{display:block;text-decoration:none;width:100%;-webkit-column-break-inside:avoid;page-break-inside:avoid;break-inside:avoid;padding:20px 10px;font-size:13px;position:relative;overflow:hidden}
+.post-item-block{display:block;text-decoration:none;width:100%;-webkit-column-break-inside:avoid;page-break-inside:avoid;break-inside:avoid;padding:10px 10px;font-size:13px;position:relative;overflow:hidden}
 @media(min-width:768px){.post-item-block{width:50%}
 }@media(min-width:960px){.post-item-block{width:33.333%}
 }.post-item-block img.feat{width:100%;height:auto;float:left}
-.post-item-block .post-excerpt{box-sizing:border-box;display:block;width:100%;height:100%;background:#888b8d;color:#FFF;padding:15px;border-top:2px solid #93c90e}
+.post-item-block .wrap{display:block;width:100%;height:100%;background:#888b8d}
+.post-item-block .post-excerpt{box-sizing:border-box;display:block;width:100%;height:100%;color:#FFF;padding:15px}
 .post-item-block .thumb{display:block;width:100%;height:200px;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#333}
 @media(min-width:768px){.post-item-block .thumb{height:160px}
 }@media(min-width:960px){.post-item-block .thumb{height:170px}
@@ -2048,7 +2049,7 @@ h2{font-size:25px;letter-spacing:1px}
 @media screen and (min-width:960px){.post-item-block .ptitle span.title{width:65%}
 }.post-item-block .ptitle span.date{display:inline-block;width:100%;float:right;font-size:12px;text-align:left}
 @media screen and (min-width:960px){.post-item-block .ptitle span.date{width:30%;float:right;text-align:right}
-}.post-item-block .image{display:block}
+}.post-item-block .image{display:block;border-bottom:2px solid #93c90e}
 .post-item-block .readmore{display:block;color:#dedada;margin-top:6px}
 .post-item-block:hover .readmore{color:#FFF}
 .single-post-Image{width:100%;float:left;margin-bottom:20px}

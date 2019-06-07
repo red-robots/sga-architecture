@@ -116,17 +116,21 @@ if ( $theposts->have_posts() ) {  ?>
 				$pexcerpt = ($pcontent) ? shortenText($pcontent,80) : '';
 				?>
 				<a class="post-item-block" href="<?php echo get_permalink(); ?>">
-					<span class="image clear <?php echo ($pImg) ? 'has-image': 'no-image';?>"><span class="thumb" style="background-image:url('<?php echo $pImageSrc ?>');"></span><img style="display:none;" class="feat" src="<?php echo $pImageSrc ?>" alt="<?php echo get_the_title() ?>" /></span>				
-					<span class="post-excerpt clear">
-						<span class="ptitle clear">
-							<span class="title"><?php echo get_the_title(); ?></span>
-							<span class="date"><?php echo get_the_date('m/d/y'); ?></span>
-						</span>
-						
-						<?php if ($pexcerpt) { ?>
-							<?php echo $pexcerpt; ?>
-							<span class="readmore clear">Read More &gt;</span>
+					<span class="wrap">
+						<?php if ($pImg) { ?>
+						<span class="image clear <?php echo ($pImg) ? 'has-image': 'no-image';?>"><span class="thumb" style="background-image:url('<?php echo $pImageSrc ?>');"></span><img style="display:none;" class="feat" src="<?php echo $pImageSrc ?>" alt="<?php echo get_the_title() ?>" /></span>					
 						<?php } ?>
+						<span class="post-excerpt clear">
+							<span class="ptitle clear">
+								<span class="title"><?php echo get_the_title(); ?></span>
+								<span class="date"><?php echo get_the_date('m/d/y'); ?></span>
+							</span>
+							
+							<?php if ($pexcerpt) { ?>
+								<?php echo $pexcerpt; ?>
+								<span class="readmore clear">Read More &gt;</span>
+							<?php } ?>
+						</span>
 					</span>
 				</a>
 			<?php endwhile; wp_reset_postdata(); ?>
