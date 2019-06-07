@@ -325,6 +325,21 @@ h2 {
 	padding-bottom: 10px;
 	border-bottom: 1px solid $color_grey;
 }
+.head1.single-title {
+	a {
+		color: $color_grey;
+		text-decoration: none;
+		&:hover {
+			color: $color_lime;
+		}
+	}
+	span.current {
+		text-transform: none;
+	}
+	span.sep {
+		padding: 0 2px;
+	}
+}
 .portfolio-content {
 	min-height: 25em;
 	.col-left {
@@ -762,8 +777,22 @@ h2 {
 		width: 100%;
 		height: auto;
 	}
-	img.featImg {
-		float: left;
+	.featImage {
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: #ccc;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// @include md {
+		// 	height: 380px;
+		// }
+		// @include lg {
+		// 	height: 425px;
+		// }
 	}
 	.placeholder {
 		width: 100%;
@@ -788,19 +817,20 @@ h2 {
 		}
 	}
 	.last-post-excerpt {
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background: #888b8d;
-		@media screen and (min-width: $tabwidth) {
-			width: 90%;
+		width: 60%;
+		position: relative;
+		color: #FFF;
+		background: $color_dark_grey;
+		z-index: 10;
+		float: left;
+		@include sm {
+			width: 48%;
 		}
-		@media screen and (min-width: $midwidth) {
-			width: 85%;
+		@include md {
+			width: 35%;
 		}
-		@media screen and (min-width: $deskwidth) {
-			width: 75%;
+		@include lg {
+			width: 32%;
 		}
 	}
 	h2.title {
@@ -816,17 +846,17 @@ h2 {
 	.excerpt {
 		color: #FFF;
 		font-size: 12px;
-		line-height: 1.4;
+		line-height: 1.6;
 		padding: 15px;
 		a {
 			color: #FFF;
 		}
 	}
 	a.readmore {
-		margin-top: 3px;
+		margin-top: 10px;
 		display: inline-block;
 		text-decoration: none;
-		color: #dedada;
+		color: $color_lime;
 		font-weight: 500;
 		&:hover {
 			color: #FFF;
@@ -836,18 +866,9 @@ h2 {
 .post-items-wrap {
 	width: 100%;
 	float: left;
-	margin-top: 10px;
 	.itemrows {
 		margin-left: -10px;
 		margin-right: -10px;
-		column-count: 1;
-		column-gap: 0;
-		@media screen and (min-width: $tabwidth) {
-			column-count: 2;
-		}
-		@media screen and (min-width: $midwidth) {
-			column-count: 3;
-		}
 	}
 	.pagination-links {
 		margin-top: 25px;
@@ -858,8 +879,16 @@ h2 {
 	text-decoration: none;
 	width: 100%;
 	break-inside: avoid;
- 	padding: 10px;
+ 	padding: 20px 10px;
  	font-size: 13px;
+ 	position: relative;
+ 	overflow: hidden;
+ 	@include sm {
+ 		width: 50%;
+ 	}
+ 	@include md {
+ 		width: 33.333%;
+ 	}
 	img.feat {
 		width: 100%;
 		height: auto;
@@ -869,10 +898,26 @@ h2 {
 		box-sizing: border-box;
 		display: block;
 		width: 100%;
+		height: 100%;
 		background: #888b8d;
 		color: #FFF;
 		padding: 15px;
 		border-top: 2px solid $color_lime;
+	}
+	.thumb {
+		display: block;
+		width: 100%;
+		height: 200px;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: #333;
+		@include sm {
+	 		height: 160px;
+	 	}
+	 	@include md {
+	 		height: 170px;
+	 	}
 	}
 	.ptitle {
 		display: block;
@@ -911,6 +956,48 @@ h2 {
 	&:hover {
 		.readmore {
 			color: #FFF;
+		}
+	}
+}
+.single-post-Image {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+}
+.post-header {
+	width: 100%;
+	position: relative;
+	h1 {
+		display: inline-block;
+		text-transform: uppercase;
+		color: $color_lime;
+		font-size: 20px;
+		font-weight: 400;
+		margin: 0 0;
+	}
+}
+.post-date {
+	font-size: 14px;
+	padding-left: 5px;
+	color: #b1b1b1;
+}
+.post-content {
+	width: 100%;
+	float: left;
+	font-size: 14px;
+	line-height: 1.6;
+
+	a {
+		color: $color_lime;
+		text-decoration: underline;
+		font-weight: 500;
+		&:hover {
+			color: $color_grey;
 		}
 	}
 }
