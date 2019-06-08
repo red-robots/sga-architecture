@@ -67,21 +67,20 @@ if ( $theposts->have_posts() ) {  ?>
 		$latest_post_title = $latestPost->post_title;
 		$post_thumbnail_id = get_post_thumbnail_id( $latest_post_id );
 		$img = wp_get_attachment_image_src($post_thumbnail_id,'medium_large');
-		$placeholderImage = get_bloginfo('template_url').'/images/coming-soon-white.jpg'; 
+		$placeholderImage = get_bloginfo('template_url').'/images/coming-soon-landscape.jpg'; 
 		$latest_content = $latestPost->post_content;
 		$content = strip_shortcodes($latest_content);
 		$content = preg_replace("/<img[^>]+\>/i", " ", $latest_content);          
 		$content = str_replace(']]>', ']]>', $content);
 		$excerpt = ($content) ? shortenText($content,520) : '';
 		$latest_post_link = get_permalink($latest_post_id);
+		$featImg = ($img) ? $img[0] : $placeholderImage;
 		?>
 		<?php if ($paged<2) { ?>
 			<?php if( !is_archive() ) { ?>
-			<div class="lastest_post_image clear">
+			<div class="lastest_post_image clear <?php echo ($img) ? 'has-feat-image':'no-feat-image'?>">
 				<?php if ($img) { ?>
-					<div class="featImage" style="background-image:url('<?php echo $img[0] ?>');"><img style="display:none;" src="<?php echo $img[0] ?>" alt="<?php echo $latest_post_title;?>" /></div>
-				<?php } else { ?>
-				<div class="placeholder" style="background-image:url('<?php echo $placeholderImage ?>')"></div>
+				<div class="<?php echo ($img) ? 'featImage':'featImage placeholder'?>" style="background-image:url('<?php echo $featImg ?>');"><img src="<?php echo $featImg ?>" alt="<?php echo $latest_post_title;?>" /></div>
 				<?php } ?>
 				<div class="last-post-excerpt">
 					<h2 class="title"><?php echo $latest_post_title ?></h2>
