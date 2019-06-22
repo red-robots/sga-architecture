@@ -1038,10 +1038,24 @@ h2 {
 		color: $color_lime;
 		height: 100%;
 	}
+	.photodiv {
+		text-decoration: none;
+		display: block;
+		position: relative;
+		border-bottom: 2px solid $color_lime;
+		background-size:cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-color: #CCC;
+		width: 100%;
+	}
 	img {
 		width: 100%;
 		height: auto;
-		border-bottom: 2px solid $color_lime;
+		visibility: hidden;
+	}
+	img.team-photo {
+		display: none;
 	}
 	.name {
 		padding: 10px 15px;

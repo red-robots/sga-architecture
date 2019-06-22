@@ -29,8 +29,11 @@ get_header(); ?>
 				?>
 				<div class="flexbox info">
 					<div class="inside">
-						<a href="<?php echo get_permalink(); ?>"><img src="<?php echo $photoSrc ?>" alt="<?php echo $photo_alt ?>" /></a>
-						<div class="name">
+						<a class="photodiv clear" href="<?php echo get_permalink(); ?>" style="background-image:url('<?php echo $photoSrc ?>');">
+							<img class="team-photo" src="<?php echo $photoSrc ?>" alt="<?php echo $photo_alt ?>" />
+							<img src="<?php echo get_bloginfo('template_url') ?>/images/px.png" alt="" aria-hidden="true" />
+						</a>
+						<div class="name clear">
 							<h3><?php echo $name ?></h3>
 							<a class="link" href="<?php echo get_permalink(); ?>">Profile <span>&gt;</span></a>
 						</div>

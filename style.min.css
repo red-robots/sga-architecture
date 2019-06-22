@@ -2069,7 +2069,9 @@ h2{font-size:25px;letter-spacing:1px}
 }@media(min-width:900px){.the-team .info{width:25%}
 }@media(min-width:1200px){.the-team .info{width:16.666%}
 }.the-team .inside{background:#27251f;color:#93c90e;height:100%}
-.the-team img{width:100%;height:auto;border-bottom:2px solid #93c90e}
+.the-team .photodiv{text-decoration:none;display:block;position:relative;border-bottom:2px solid #93c90e;background-size:cover;background-position:top center;background-repeat:no-repeat;background-color:#CCC;width:100%}
+.the-team img{width:100%;height:auto;visibility:hidden}
+.the-team img.team-photo{display:none}
 .the-team .name{padding:10px 15px}
 .the-team h3{color:#93c90e;font-weight:300;font-size:16px;line-height:1.2;text-transform:uppercase;margin:0 0 5px}
 .the-team a.link{font-family:"Poppins",sans-serif;font-size:13px;font-weight:300;color:#797979;text-decoration:none}
