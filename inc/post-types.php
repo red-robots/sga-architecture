@@ -26,7 +26,7 @@ function js_custom_init() {
             'plural'    => 'Team',
             'single'    => 'Team',
             'menu_icon' => 'dashicons-groups',
-            'supports'  => array('title','editor','thumbnail')
+            'supports'  => array('title','editor')
         ),
     );
     
@@ -153,6 +153,12 @@ function set_custom_cpt_columns($columns) {
         $columns['taxonomy-portfolio_categories'] = __( 'Categories', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
     }
+
+    if($post_type=='team') {
+        unset( $columns['date'] );
+        $columns['team_photo'] = __( 'Photo', 'bellaworks' );
+        $columns['date'] = __( 'Date', 'bellaworks' );
+    }
     
     return $columns;
 }
@@ -170,6 +176,22 @@ function custom_post_column( $column, $post_id ) {
                 $thumbnail_id = get_post_thumbnail_id($post_id);
                 $img = wp_get_attachment_image_src($thumbnail_id,'small-thumbnail');
                 $img_src = ($img) ? $img[0] : '';
+                $the_photo = '<span class="tmphoto" style="display:inline-block;width:70px;height:50px;background:#e2e1e1;text-align:center;">';
+                if($img_src) {
+                   $the_photo .= '<span style="background:url('.$img_src.') center no-repeat;background-size:cover;display:block;width:100%;height:100%;"></span>';
+                } else {
+                    $the_photo .= '<i class="dashicons dashicons-format-image" style="font-size:23px;position:relative;top:14px;left:-1px;opacity:0.2;"></i>';
+                }
+                $the_photo .= '</span>';
+                echo $the_photo;
+        }
+    }
+
+    if($post_type=='team') {
+        switch ( $column ) {
+            case 'team_photo' :
+                $img = get_field('photo',$post_id);
+                $img_src = ($img) ? $img['url'] : '';
                 $the_photo = '<span class="tmphoto" style="display:inline-block;width:70px;height:50px;background:#e2e1e1;text-align:center;">';
                 if($img_src) {
                    $the_photo .= '<span style="background:url('.$img_src.') center no-repeat;background-size:cover;display:block;width:100%;height:100%;"></span>';
