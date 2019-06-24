@@ -24,8 +24,8 @@ get_header(); ?>
 			<?php while ( $teams->have_posts() ) : $teams->the_post(); 
 				$name = get_the_title();
 				$photo = get_field('photo');
-				$photo_alt = ($photo) ? $photo['title']:'';
-				$photoSrc = ($photo) ? $photo['url'] : get_bloginfo('template_url') .'/images/nophoto.jpg';
+				$photo_alt = ( isset($photo['title']) && $photo['title'] ) ? $photo['title']:'';
+				$photoSrc = ( isset($photo['url']) && $photo['url'] ) ? $photo['url'] : get_bloginfo('template_url') .'/images/nophoto.jpg';
 				?>
 				<div class="flexbox info">
 					<div class="inside">
