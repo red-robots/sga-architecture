@@ -389,11 +389,11 @@ function get_homepage_id() {
 function get_posts_by_year($posttype='post') {
   global $wpdb;
   $categories = array();
-  $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM $wpdb->posts WHERE post_type = '".$posttype."' AND post_status = 'publish' GROUP BY year DESC" ); 
+  $years = $wpdb->get_results( "SELECT YEAR(post_date) AS year FROM $wpdb->posts WHERE post_type = '".$posttype."' AND post_status = 'publish' GROUP BY year ORDER BY year DESC" ); 
   if($years) {
     foreach($years as $y) {
       $yr = $y->year; 
-      $months = $wpdb->get_results( "SELECT MONTH(post_date) AS month, count(*) as count FROM $wpdb->posts WHERE post_type = '".$posttype."' AND post_status = 'publish' AND YEAR(post_date)='".$yr."' GROUP BY month DESC" ); 
+      $months = $wpdb->get_results( "SELECT MONTH(post_date) AS month, count(*) as count FROM $wpdb->posts WHERE post_type = '".$posttype."' AND post_status = 'publish' AND YEAR(post_date)='".$yr."' GROUP BY month ORDER BY month DESC" ); 
       $month_list = array();
       if($months) {
         foreach($months as $m) {

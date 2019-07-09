@@ -50,7 +50,9 @@ if ( $theposts->have_posts() ) {  ?>
 							<?php } ?>
 						</span>
 					</span>
+					<img class="px" src="<?php echo get_bloginfo('template_url') ?>/images/px2.png" alt="" aria-hidden="true" />
 				</a>
+
 			</div>
 		<?php endwhile; wp_reset_postdata(); ?>
 		</div>
