@@ -479,6 +479,8 @@ ul.sblocations li.first {
 		border-radius: 0px!important;
 		box-shadow: none;
 		outline: none;
+		border: 1px solid #edeeee;
+		background: #edeeee;
 		@include transition(all ease-out .3s);
 		&:focus {
 			border: 1px solid $color_lime;
