@@ -487,6 +487,10 @@ ul.sblocations li.first {
 			box-shadow: 0px 0px 5px 0px rgba(147,201,14,0.75);
 		}
 	}
+	textarea {
+		height: 200px!important;
+	}
+
 	.gform_footer input.button,
 	.gform_wrapper .gform_footer input[type=submit] {
 		background: $color_lime;
