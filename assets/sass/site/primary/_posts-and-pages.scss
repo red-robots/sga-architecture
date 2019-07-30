@@ -8,8 +8,12 @@ h2 {
 }
 .text-center{text-align:center;}
 .default-temp {
-	margin-top: 14px;
-	padding-top: 15px;
+	margin-top: 0;
+	padding-top: 10px;
+	@media screen and (min-width: $tabwidth) {
+		margin-top: 14px;
+		padding-top: 15px;
+	}
 	.site-main {
 		min-height: 30em;
 		padding-bottom: 50px;

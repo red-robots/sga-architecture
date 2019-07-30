@@ -98,7 +98,7 @@
 	}
 	li.current-menu-item:hover > a,
 	li.current-menu-item > a {
-		color: $color_lime;
+		color: $color_grey;
 		@media screen and (min-width: $tabwidth) {
 			color: $color_lime;
 		}
