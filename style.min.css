@@ -2032,6 +2032,13 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .project-sliders .flex-control-nav li a:hover{background:rgba(255,255,255,0.5)}
 .project-sliders .flex-control-paging li a{width:10px;height:10px;background:transparent;border:1px solid #FFF}
 .project-sliders .flex-control-paging li a.flex-active,.project-sliders .flex-control-paging li a.flex-active:hover{background:#93c90e}
+.project-sliders .flex-direction-nav a{opacity:.5}
+.project-sliders .flex-direction-nav a:before{color:#FFF;font-size:25px;position:relative;top:2px;text-shadow:none}
+.project-sliders .flex-direction-nav a:hover{opacity:1}
+.project-sliders .flex-direction-nav .flex-prev{left:0}
+.project-sliders .flex-direction-nav .flex-prev:before{left:14px}
+.project-sliders .flex-direction-nav .flex-next{right:0}
+.project-sliders .flex-direction-nav .flex-next:before{right:14px}
 .project-details{padding-top:30px;font-size:14px;width:100%;float:left;position:relative}
 .project-details .project-inner{position:relative;width:100%;float:left}
 @media screen and (min-width:600px){.project-details .project-inner.two-column:after{content:"";display:block;width:22%;height:100%;position:absolute;top:0;left:0;border-right:1px solid #27251f}

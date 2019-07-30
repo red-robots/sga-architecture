@@ -849,6 +849,31 @@ ul.categories.open .mobile-cat-label {
 			background: $color_lime;
 		}
 	}
+	.flex-direction-nav a {
+		opacity: 0.5;
+		&:before {
+			color: #FFF;
+			font-size: 25px;
+			position: relative;
+			top: 2px;
+			text-shadow: none;
+		}	
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.flex-direction-nav .flex-prev {
+		left: 0;
+		&:before {
+			left: 14px;
+		}
+	}
+	.flex-direction-nav .flex-next {
+		right: 0;
+		&:before {
+			right: 14px;
+		}
+	}
 
 }
 
