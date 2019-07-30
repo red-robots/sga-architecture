@@ -68,6 +68,7 @@ body {
 .logo {
 	width: 180px;
 	margin: 0 auto;
+	position: relative;
 	@media screen and (min-width: $tabwidth) {
 		width: 210px;
 		margin: 0 0;
@@ -75,6 +76,7 @@ body {
 	}
 	@media screen and (min-width: $midwidth) {
 		width: 260px;
+		top: -3px;
 	}
 	a,img {
 		width: 100%;

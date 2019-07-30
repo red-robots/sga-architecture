@@ -1817,9 +1817,9 @@ body{background:#27251f}
 .widget-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
 }@media screen and (min-width:1200px){}
-.logo{width:180px;margin:0 auto}
+.logo{width:180px;margin:0 auto;position:relative}
 @media screen and (min-width:600px){.logo{width:210px;margin:0;float:left}
-}@media screen and (min-width:900px){.logo{width:260px}
+}@media screen and (min-width:900px){.logo{width:260px;top:-3px}
 }.logo a,.logo img{width:100%;height:auto;float:left}
 .logo a{padding:10px 0}
 .site-header{position:relative;z-index:200}
