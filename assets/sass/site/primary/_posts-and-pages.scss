@@ -39,12 +39,18 @@ h2 {
 
 .slides-wrap {
 	position: relative;
-	height: 350px;
+	height: 300px;
 	@media screen and (min-width: $tabwidth) {
 		height: 400px;
 	}
 	@media screen and (min-width: $midwidth) {
-		height: 480px;
+		height: 600px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		height: 660px;
+	}
+	@media screen and (min-width: $extrawidth) {
+		height: 700px;
 	}
 	.sliders {
 		margin: 0 0;

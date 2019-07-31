@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
 	$('.slideshow').flexslider({
 		animation: "slide",
 		selector: ".sliders > li",
-		slideshowSpeed: 4000,
+		slideshowSpeed: 4800,
 		animationSpeed: 600
 	}); // end register flexslider
 	

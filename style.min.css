@@ -1876,9 +1876,11 @@ h2{font-size:25px;letter-spacing:1px}
 .site-main{font-size:14px;line-height:1.6;font-weight:400}
 @media screen and (min-width:600px){.flexrow{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 }.flexrow .flexbox{box-sizing:border-box;position:relative}
-.slides-wrap{position:relative;height:350px}
+.slides-wrap{position:relative;height:300px}
 @media screen and (min-width:600px){.slides-wrap{height:400px}
-}@media screen and (min-width:900px){.slides-wrap{height:480px}
+}@media screen and (min-width:900px){.slides-wrap{height:600px}
+}@media screen and (min-width:1200px){.slides-wrap{height:660px}
+}@media screen and (min-width:1400px){.slides-wrap{height:700px}
 }.slides-wrap .sliders{margin:0;padding:0;list-style:none}
 .slides-wrap .flex-viewport,.slides-wrap .sliders,.slides-wrap .slide,.slides-wrap .slide-image{width:100%;height:100%;position:relative}
 .slides-wrap .slide-image{position:absolute;top:0;left:0;background-size:cover;background-repeat:no-repeat;background-position:center}
