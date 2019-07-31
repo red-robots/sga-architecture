@@ -1674,9 +1674,10 @@ a:hover,a:active{outline:0}
 .main-navigation .menu{padding:10px 20px;position:relative}
 @media screen and (min-width:600px){.main-navigation .menu{display:inline-block;float:right;right:-15px;padding:0}
 }.main-navigation .menu a{display:inline-block;text-decoration:none;color:#FFF;border-top:1px dotted rgba(255,255,255,0.65);font-weight:400}
-@media screen and (min-width:600px){.main-navigation .menu a{color:#888b8d}
-}.main-navigation .menu li:first-child>a{border-top:0}
-.main-navigation .menu li{position:relative}
+@media screen and (min-width:600px){.main-navigation .menu a{border-top:0;color:#888b8d}
+}.main-navigation .menu li:first-child>a{border-top:1px dotted transparent}
+@media screen and (min-width:600px){.main-navigation .menu li:first-child>a{border-top:0}
+}.main-navigation .menu li{position:relative}
 .main-navigation .menu>li{text-align:left}
 @media screen and (min-width:600px){.main-navigation .menu>li{float:left;text-align:center}
 }.main-navigation .menu>li>a{text-transform:uppercase;font-size:18px;line-height:1.3;padding:8px;display:block}
@@ -2053,7 +2054,7 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .project-details .option{margin-bottom:15px}
 .project-details .option:last-child{margin-bottom:0}
 .project-details .o-name{font-size:12px;text-transform:uppercase;color:#93c90e}
-.project-details .o-info{font-size:12px}
+.project-details .o-info{font-size:12px;position:relative;top:-2px}
 .pagination-links{margin-top:15px;text-align:right;width:100%;float:left}
 .pagination-links span,.pagination-links a{display:inline-block;text-decoration:none;font-size:14px;line-height:14px;padding:6px 10px;margin-left:4px}
 .pagination-links a{background:#bfbfbf;color:#FFF}
@@ -2107,7 +2108,8 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .post-content a:hover{color:#888b8d}
 .single-page-content{padding-top:20px;padding-bottom:50px}
 .the-team .flexrow{margin-left:-10px;margin-right:-10px}
-.the-team .info{width:100%;padding:10px 10px;overflow:hidden}
+@media(min-width:600px){.the-team .flexrow{-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+}.the-team .info{width:100%;padding:10px 10px;overflow:hidden}
 @media(min-width:600px){.the-team .info{width:50%}
 }@media(min-width:900px){.the-team .info{width:25%}
 }@media(min-width:1200px){.the-team .info{width:16.666%}

@@ -951,6 +951,8 @@ ul.categories.open .mobile-cat-label {
 	}
 	.o-info {
 		font-size: 12px;
+		position: relative;
+		top: -2px;
 	}
 }
 
@@ -1233,6 +1235,9 @@ ul.categories.open .mobile-cat-label {
 	.flexrow {
 		margin-left: -10px;
 		margin-right: -10px;
+		@include sm {
+			@include flexbox-justify(center);
+		}
 	}
 	.info {
 		width: 100%;

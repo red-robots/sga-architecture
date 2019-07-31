@@ -46,11 +46,15 @@
 		border-top: 1px dotted rgba(255,255,255,.65);
 		font-weight: 400;
 		@media screen and (min-width: $tabwidth) {
+			border-top: none;
 			color: $color_grey;
 		}
 	}
 	.menu li:first-child > a {
-		border-top: none;
+		border-top: 1px dotted transparent;
+		@media screen and (min-width: $tabwidth) {
+			border-top: none;
+		}
 	}
 	.menu li {
 		position: relative;

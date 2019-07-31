@@ -1,6 +1,6 @@
 <?php 
 /* Custom Post Types */
-//DASH ICONS = https://developer.wordpress.org/resource/dashicons/
+//ICONS = https://developer.wordpress.org/resource/dashicons/
 add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
@@ -28,6 +28,14 @@ function js_custom_init() {
             'menu_icon' => 'dashicons-groups',
             'supports'  => array('title','editor')
         ),
+        array(
+            'post_type' => 'careers',
+            'menu_name' => 'Careers',
+            'plural'    => 'Careers',
+            'single'    => 'Career',
+            'menu_icon' => 'dashicons-megaphone',
+            'supports'  => array('title','editor')
+        )
     );
     
     if($post_types) {
