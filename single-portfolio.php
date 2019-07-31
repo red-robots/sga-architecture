@@ -34,13 +34,15 @@ get_header(); ?>
 						<ul class="sliders">
 							<?php if ($img) { ?>
 							<li class="slide main">
-								<div class="ps-image" style="background-image:url('<?php echo $img[0];?>')"></div>
+								<div style="display:none;" class="ps-image" style="background-image:url('<?php echo $img[0];?>')"></div>
+								<img class="ssimage mainpic" src="<?php echo $img[0];?>" alt="" />
 							</li>	
 							<?php } ?>
 							<?php if ($galleries) { ?>
 								<?php foreach ($galleries as $g) { ?>
 								<li class="slide gallery">
-									<div class="ps-image" style="background-image:url('<?php echo $g['url'];?>')"></div>
+									<img class="ssimage" src="<?php echo $g['url'];?>" alt="<?php echo $g['title'];?>" />
+									<div style="display:none;" class="ps-image" style="background-image:url('<?php echo $g['url'];?>')"></div>
 								</li>
 								<?php } ?>	
 							<?php } ?>

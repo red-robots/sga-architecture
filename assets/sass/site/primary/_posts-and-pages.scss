@@ -812,7 +812,7 @@ ul.categories.open .mobile-cat-label {
 		height: 450px;
 	}
 	@media screen and (min-width: $deskwidth) {
-		height: 470px;
+		height: 480px;
 	}
 	.project-images {
 		width: 100%;
@@ -826,6 +826,12 @@ ul.categories.open .mobile-cat-label {
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+		text-align: center;
+	}
+	img.ssimage {
+		width: auto;
+		height: 100%;
+		margin: 0 auto;
 	}
 	.slide {
 		width: 100%;
@@ -881,13 +887,13 @@ ul.categories.open .mobile-cat-label {
 		}
 	}
 	.flex-direction-nav .flex-prev {
-		left: 0;
+		left: 3px;
 		&:before {
 			left: 14px;
 		}
 	}
 	.flex-direction-nav .flex-next {
-		right: 0;
+		right: 3px;
 		&:before {
 			right: 14px;
 		}
