@@ -27,8 +27,11 @@ get_header(); ?>
 				$img = get_field('catimage', $term);
         		if($img) {
         			$img_src = $img['url'];
+        			$styles = ' style="background-image:url('.$img_src.')"';
         		} else {
-        			$img_src = get_bloginfo('template_url').'/images/coming-soon-white.jpg';
+        			$img_src = '';
+        			$styles = '';
+        			//$img_src = get_bloginfo('template_url').'/images/coming-soon-white.jpg';
         		} 
         		$square = get_bloginfo('template_url').'/images/px2.png';
         		?>
@@ -36,7 +39,7 @@ get_header(); ?>
 					<a href="<?php echo $catlink ?>" class="link">
 						<img src="<?php echo $square ?>" alt="" aria-hidden="true" />
 						<span class="catname"><?php echo $catname; ?></span>
-						<span class="bg" style="background-image:url('<?php echo $img_src; ?>');"></span>
+						<span class="bg"<?php echo $styles ?>></span>
 					</a>
 				</div>
 				<?php } ?>

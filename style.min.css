@@ -1881,7 +1881,7 @@ h2{font-size:25px;letter-spacing:1px}
 @media(min-width:600px){.catflex .category{width:33.333%}
 }.catflex .link{text-decoration:none;display:block;position:relative;width:100%;height:100%;overflow:hidden;background-color:#333}
 .catflex .link span{-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
-.catflex .link .bg{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.catflex .link .bg{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#909090}
 .catflex .link .bg:before{content:"";display:block;width:100%;height:100%;position:absolute;bottom:0;left:0;background:rgba(0,0,0,0.4);-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
 .catflex .link:hover .bg{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 .catflex .link:hover .bg:before{background:rgba(0,0,0,0.75)}
