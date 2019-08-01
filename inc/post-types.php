@@ -153,7 +153,6 @@ function set_custom_cpt_columns($columns) {
     $query = isset($wp_query->query) ? $wp_query->query : '';
     $post_type = ( isset($query['post_type']) ) ? $query['post_type'] : '';
     
-    
     if($post_type=='portfolio') {
         unset( $columns['taxonomy-portfolio_categories'] );
         unset( $columns['date'] );
@@ -212,3 +211,54 @@ function custom_post_column( $column, $post_id ) {
     }
     
 }
+
+/* Taxonomy Column */
+add_filter('manage_edit-portfolio_categories_columns' , 'my_custom_taxonomy_columns');
+function my_custom_taxonomy_columns( $columns ) {
+    unset( $columns['slug'] );
+    unset( $columns['description'] );
+    unset( $columns['posts'] );
+    $columns['category_image'] = __('Image');
+    $columns['slug'] = __('Slug');
+    $columns['posts'] = __('Count');
+    return $columns;
+}
+
+function my_custom_taxonomy_columns_content( $content, $column_name, $term_id ) {
+    $term = get_term($term_id, 'portfolio_categories');
+    switch ($column_name) {
+        case 'category_image': 
+            $img = get_field('catimage', $term);
+            $img_src = ($img) ? $img['url'] : '';
+            $content = '<span class="tmphoto" style="display:inline-block;width:70px;height:50px;background:#f1f1f1;text-align:center;">';
+                if($img_src) {
+                   $content .= '<span style="background:url('.$img_src.') center no-repeat;background-size:cover;display:block;width:100%;height:100%;"></span>';
+                } else {
+                    $content .= '<i class="dashicons dashicons-format-image" style="font-size:23px;position:relative;top:14px;left:-1px;opacity:0.2;"></i>';
+                }
+                $content .= '</span>';
+            break;
+    }
+    return $content;    
+}
+add_filter( 'manage_portfolio_categories_custom_column', 'my_custom_taxonomy_columns_content', 10, 3 );
+
+
+
+ 
+// function manage_theme_columns($out, $column_name, $theme_id) {
+//     $theme = get_term($theme_id, 'portfolio_categories');
+//     switch ($column_name) {
+//         case 'header_icon': 
+//             // get header image url
+//             // $data = maybe_unserialize($theme->description);
+//             // $out .= "<img src=\"{$data['HEADER_image']}\" width=\"250\" height=\"83\"/>"; 
+//             $out = 'test';
+//             break;
+ 
+//         default:
+//             break;
+//     }
+//     return $out;    
+// }
+
