@@ -5,6 +5,7 @@
 @mixin sm { @media (min-width: $tabwidth) { @content; } }
 @mixin md { @media (min-width: $midwidth) { @content; } }
 @mixin lg { @media (min-width: $deskwidth) { @content; } }
+@mixin xl { @media (min-width: $extrawidth) { @content; } }
 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {

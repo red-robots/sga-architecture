@@ -97,4 +97,71 @@ jQuery(document).ready(function ($) {
 			$(this).parents('li.catlink').addClass('active');
 		});
 	}
+
+
+	/* Careers */
+	side_horizontal_line ();
+	function side_horizontal_line () {
+		if( $(".careers-content").length ) {
+			var content_width = $("#content").outerWidth();
+			var title_width = $("#titlewrap").outerWidth();
+			var cw = parseInt(content_width);
+			var tw = parseInt(title_width);
+			var remain = cw-tw;
+			var side_width = remain/2;
+			$(".sidehline").css('width',side_width+'px');
+
+			var video_wrap = $(".video-wrapper").outerHeight();
+			var video_width = $("#video").outerHeight();
+			var va = parseInt(video_width);
+			var vb = parseInt(video_wrap);
+			var w1 = va - vb;
+			var w2 = w1/2;
+			$("#vidwrap").css('top','-'+w2+'px');
+		}
+	}
+
+	$( window ).resize(function() {
+	  side_horizontal_line ();
+	});
+
+	$(document).on("click","#menutoggle2",function(e){
+		e.preventDefault();
+		$("#navi2").toggleClass("open");
+	});
+
+	window.onload = function() {
+
+		if( $('#video').length ) {
+			// Video
+			var video = document.getElementById("video");
+			document.getElementById('video').play();
+
+			// Buttons
+			var playButton = document.getElementById("play-pause");
+
+			// Event listener for the play/pause button
+			playButton.addEventListener("click", function() {
+			  if (video.paused == true) {
+			    // Play the video
+			    video.play();
+
+			    // Update the button text to 'Pause'
+			    playButton.innerHTML = "Pause";
+			    playButton.classList.add("pause");
+			    playButton.classList.remove("play");
+			  } else {
+			    // Pause the video
+			    video.pause();
+
+			    // Update the button text to 'Play'
+			    playButton.innerHTML = "Play";
+			    playButton.classList.add("play");
+			    playButton.classList.remove("pause");
+			  }
+			});
+
+		}
+	}
+
 });// END #####################################    END
