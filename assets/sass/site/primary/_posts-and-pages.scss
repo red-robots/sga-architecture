@@ -1698,6 +1698,9 @@ ul.categories.open .mobile-cat-label {
 	position: relative;
 	height: auto;
 	min-height: 200px;
+	@include sm {
+		min-height: 400px;
+	}
 	@include lg {
 		height: 600px;
 	}
