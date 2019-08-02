@@ -2190,7 +2190,7 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .careers-main-navigation.open span:after{-webkit-transform:translateY(-8px) rotate(-45deg);-ms-transform:translateY(-8px) rotate(-45deg);transform:translateY(-8px) rotate(-45deg)}
 .careers-main-navigation.open .main-menu-wrapper{width:100%;opacity:1;visibility:visible}
 .careers-main-navigation.open .main-menu-wrapper .menu{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
-.video-wrapper{background-color:#333;background-size:cover;background-position:center;background-repeat:no-repeat;overflow:hidden;position:relative;height:auto}
+.video-wrapper{background-color:#333;background-size:cover;background-position:center;background-repeat:no-repeat;overflow:hidden;position:relative;height:auto;min-height:200px}
 @media(min-width:1200px){.video-wrapper{height:600px}
 }@media(min-width:1400px){.video-wrapper{height:750px}
 }.video-wrapper:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:10;background:-webkit-radial-gradient(center,ellipse cover,transparent 0,rgba(0,0,0,0.65) 100%);background:-webkit-radial-gradient(center ellipse,transparent 0,rgba(0,0,0,0.65) 100%);background:radial-gradient(ellipse at center,transparent 0,rgba(0,0,0,0.65) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#a6000000',GradientType=1)}

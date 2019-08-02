@@ -1697,6 +1697,7 @@ ul.categories.open .mobile-cat-label {
 	overflow: hidden;
 	position: relative;
 	height: auto;
+	min-height: 200px;
 	@include lg {
 		height: 600px;
 	}
