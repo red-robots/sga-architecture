@@ -8664,7 +8664,7 @@ ul.categories.open .mobile-cat-label {
   min-height: 200px; }
   @media (min-width: 600px) {
     .video-wrapper {
-      min-height: 400px; } }
+      min-height: 360px; } }
   @media (min-width: 1200px) {
     .video-wrapper {
       height: 600px; } }
