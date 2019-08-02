@@ -7,9 +7,10 @@
 get_header('careers'); ?>
 <div id="primary" class="full-content-area careers-content">
 	<?php  
-	$placeholder = get_bloginfo('template_url') . '/images/placeholder.jpg';
-	$style = ' style="background-image:url('.$placeholder.')"'; 
+	$placeholder = get_field('video_thumbnail');
+	$style = ($placeholder) ? ' style="background-image:url('.$placeholder['url'].')"' : ''; 
 	$video_mp4 = get_field('video_mp4');
+	$video_ogg = get_field('video_ogg');
 	?>
 	<div class="video-wrapper"<?php echo $style ?>>
 		<?php if ($video_mp4 || $video_ogg) { ?>
