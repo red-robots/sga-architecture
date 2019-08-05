@@ -131,11 +131,22 @@ jQuery(document).ready(function ($) {
 	});
 
 	window.onload = function() {
-
+		/* CAREERS MAIN VIDEO */
 		if( $('#video').length ) {
 			// Video
 			var video = document.getElementById("video");
-			document.getElementById('video').play();
+			var playPromise = document.getElementById('video');
+			// if (playPromise !== undefined) {
+			//     playPromise.then(_ => {
+			//       // Automatic playback started!
+			//       // Show playing UI.
+			//     })
+			//     .catch(error => {
+			//       // Auto-play was prevented
+			//       // Show paused UI.
+			//     });
+  	// 		}
+
 
 			// Buttons
 			var playButton = document.getElementById("play-pause");
@@ -162,6 +173,38 @@ jQuery(document).ready(function ($) {
 			});
 
 		}
+
+		if( $('.locVideo').length ) {
+			// var locvideo = document.getElementsByClassName("video");
+			// document.getElementById('video').play();
+			$('.locVideo').each(function(){
+				var vId = $(this).find('.locationvideo').attr("id");
+				var ivideo = document.getElementById(vId);
+				var iplayBtn = $(this).find(".playpauseBtn");
+				iplayBtn.on("click",function(){
+					if (ivideo.paused == true) {
+						ivideo.play();
+						iplayBtn.text('Pause');
+						iplayBtn.addClass('pause');
+						iplayBtn.removeClass('play');
+					} else {
+						ivideo.pause();
+						iplayBtn.text('Play');
+						iplayBtn.addClass('play');
+						iplayBtn.removeClass('pause');
+					}
+				});
+			});
+		}
 	}
+
+	/* Testimonials */
+	$('#testimonials').flexslider({
+		animation: "slide",
+		animationLoop: false,
+		directionNav: true,
+		itemMargin: 5,
+		minItems: 1
+	});
 
 });// END #####################################    END

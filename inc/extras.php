@@ -418,3 +418,31 @@ function get_posts_by_year($posttype='post') {
   return $categories;
   
 }
+
+function file_get_contents_curl($url) {
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_HEADER, 0);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Set curl to return the data instead of printing it to the browser.
+  curl_setopt($ch, CURLOPT_URL, $url);
+  $data = curl_exec($ch);
+  curl_close($ch);
+  return $data;
+}
+
+function getElementsByClassName($dom, $ClassName, $tagName=null) {
+  if($tagName){
+      $Elements = $dom->getElementsByTagName($tagName);
+  }else {
+      $Elements = $dom->getElementsByTagName("*");
+  }
+  $Matched = array();
+  for($i=0;$i<$Elements->length;$i++) {
+      if($Elements->item($i)->attributes->getNamedItem('class')){
+          if($Elements->item($i)->attributes->getNamedItem('class')->nodeValue == $ClassName) {
+              $Matched[]=$Elements->item($i);
+          }
+      }
+  }
+  return $Matched;
+}
+

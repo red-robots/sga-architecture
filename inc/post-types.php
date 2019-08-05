@@ -35,6 +35,22 @@ function js_custom_init() {
             'single'    => 'Career',
             'menu_icon' => 'dashicons-megaphone',
             'supports'  => array('title','editor')
+        ),
+        array(
+            'post_type' => 'locations',
+            'menu_name' => 'Locations',
+            'plural'    => 'Locations',
+            'single'    => 'Location',
+            'menu_icon' => 'dashicons-location',
+            'supports'  => array('title')
+        ),
+        array(
+            'post_type' => 'testimonials',
+            'menu_name' => 'Testimonials',
+            'plural'    => 'Testimonials',
+            'single'    => 'Testimonial',
+            'menu_icon' => 'dashicons-format-quote',
+            'supports'  => array('title','editor')
         )
     );
     
