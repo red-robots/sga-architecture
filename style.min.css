@@ -2211,7 +2211,7 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .page-template-page-careers .site-content.wrapper{max-width:100%;width:100%;padding:0}
 .careers-content{position:relative}
 .careers-content .pageheader{width:100%;margin:0;position:absolute;top:27px;left:0;z-index:10}
-.careers-content .pageheader span.sidehline{content:"";display:block;width:16.5%;height:2px;background:#93c90e;position:absolute;top:12px}
+.careers-content .pageheader span.sidehline{content:"";display:block;width:14%;height:2px;background:#93c90e;position:absolute;top:12px}
 .careers-content .pageheader span.sidehline.left{left:0}
 .careers-content .pageheader h1{margin:0;font-weight:300;font-size:20px;color:#FFF;line-height:1.2}
 .careers-content .site-main{font-size:16px;padding:40px 0 70px}
