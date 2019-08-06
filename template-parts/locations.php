@@ -13,7 +13,7 @@ if ( $locations ) {  ?>
 		$p_id = $e->ID;
 		$loc = $e->post_title;
 		$address = get_field('address',$p_id);
-		$telephone = get_field('telephone');
+		$telephone = get_field('phone',$p_id);
 		?>
 		<div class="loc flexbox">
 			<?php if ($loc) { ?>
