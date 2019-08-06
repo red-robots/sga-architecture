@@ -219,8 +219,19 @@ get_header('careers'); ?>
 		$positions = get_field('positions'); 
 		$optitle = get_field('optitle'); 
 		$optext = get_field('optext'); 
+		$positionList = array();
+		if($positions) {
+			foreach($positions as $p) {
+				$ploc = $p['location'];
+				$pjobs = $p['jobs'];
+				if($ploc && $pjobs) {
+					$positionList[] = $p;
+				}
+			}
+		}
+		$count_class = ($positionList) ? 'column' . count($positionList) : 'fullwidth';
 		?>
-		<?php if ($positions) { ?>
+		<?php if ($positionList) { ?>
 			<div class="open-positions">
 				<div class="wrapper">
 					<?php if ($optitle) { ?>
@@ -229,6 +240,31 @@ get_header('careers'); ?>
 					<?php if ($optext) { ?>
 						<div class="section-text"><?php echo $optext; ?></div>
 					<?php } ?>
+
+					<div class="jobs clear <?php echo $count_class ?>">
+					<?php foreach ($positionList as $pos) { 
+						$loc = $pos['location'];
+						$locationName = ($loc) ? $loc->post_title:'';
+						$jobs = $pos['jobs'];
+						if($loc && $jobs) { ?>
+						<div class="joblist">
+							<p class="loc"><?php echo $locationName; ?></p>
+							<?php if ($jobs) { ?>
+							<ul class="listings">
+								<?php foreach ($jobs as $j) { 
+									$jobtitle = $j['jobposition'];
+									$joblink = ($j['jobinfo']) ? $j['jobinfo'] : '#'; 
+									$target = ($joblink=='#') ? '':' target="_blank"'; ?>
+									<?php if ($jobtitle) { ?>
+									<li><a href="<?php echo $joblink ?>"<?php echo $target ?>><?php echo $jobtitle ?> <span class="arrow">&gt;</span></a></li>	
+									<?php } ?>
+								<?php } ?>
+							</ul>	
+							<?php } ?>
+						</div>
+						<?php } ?>
+					<?php } ?>
+					</div>
 				</div>
 			</div>
 		<?php } ?>

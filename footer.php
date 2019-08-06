@@ -1,35 +1,9 @@
 	</div><!-- #content -->
 
-	<?php
-	$locations = get_field('locations','option');
-	?>
 	<footer id="colophon" class="site-footer clear" role="contentinfo">
 		<div class="wrapper">
 			<div class="col left locations-list">
-				<?php if ($locations) { ?>
-					<div class="foot-title">Locations</div>
-					<div class="locations">
-						<div class="flexrow clear">
-							<?php foreach ($locations as $e) { 
-							$loc = $e['location'];
-							$address = $e['address'];
-							$telephone = $e['telephone'];
-							?>
-							<div class="loc flexbox">
-								<?php if ($loc) { ?>
-								<div class="name"><?php echo $loc ?></div>	
-								<?php } ?>
-								<?php if ($address) { ?>
-								<address class="address"><?php echo $address ?></address>	
-								<?php } ?>
-								<?php if ($telephone) { ?>
-								<div class="telephone"><a href="tel:<?php echo format_phone_number($telephone); ?>"><?php echo $telephone ?></a></div>	
-								<?php } ?>
-							</div>
-							<?php } ?>
-						</div>
-					</div>
-				<?php } ?>
+				<?php get_template_part('template-parts/locations') ?>
 			</div>
 			<div class="col right">
 				<div class="fwrap clear">

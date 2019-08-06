@@ -29,14 +29,6 @@ function js_custom_init() {
             'supports'  => array('title','editor')
         ),
         array(
-            'post_type' => 'careers',
-            'menu_name' => 'Careers',
-            'plural'    => 'Careers',
-            'single'    => 'Career',
-            'menu_icon' => 'dashicons-megaphone',
-            'supports'  => array('title','editor')
-        ),
-        array(
             'post_type' => 'locations',
             'menu_name' => 'Locations',
             'plural'    => 'Locations',

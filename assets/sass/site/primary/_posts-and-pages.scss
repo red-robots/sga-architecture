@@ -1554,15 +1554,17 @@ ul.categories.open .mobile-cat-label {
 		}
 	}
 	ul.cats a {
+		display: inline-block;
 		text-decoration: none;
 		color: #888b8d;
 		text-transform: uppercase;
 		font-size: 14px;
 		font-weight: 300;
 		letter-spacing: 1px;
-		padding: 5px 21px 5px 20px;
+		padding: 4px 15px;
 		position: relative;
 		@include sm {
+			padding: 5px 21px 5px 20px;
 			font-size: 16px;
 		}
 		&:after {
@@ -1571,7 +1573,7 @@ ul.categories.open .mobile-cat-label {
 			height: 18px;
 			background: #888b8d;
 			position: absolute;
-			top: 6px;
+			top: 8px;
 			right: 0;
 		}
 	}
@@ -1604,9 +1606,13 @@ ul.categories.open .mobile-cat-label {
 		height: 0;
 		@include transition(all ease-out .3s);
 		.menu {
-			background: rgba(255,255,255,.85);
+			border: 1px solid #e4e4e4;
+			background: rgba(255,255,255,.98);
 			@include transition(all ease-out .3s);
 			@include transform( translateY(-100%) );
+			@include sm {
+				border: none;
+			}
 		}
 	}
 	.menu a {
@@ -1660,7 +1666,7 @@ ul.categories.open .mobile-cat-label {
 			display: block;
 			width: 100%;
 			height: 3px;
-			background: rgba(255,255,255,.75);
+			background: rgba(255,255,255,1);
 			border-radius: 1px;
 			position: absolute;
 			@include transition(all ease-out .3s);
@@ -1859,7 +1865,7 @@ ul.categories.open .mobile-cat-label {
 	}
 	.site-main {
 		font-size: 16px;
-		padding: 40px 0;
+		padding: 40px 0 70px;
 	}
 	.intro {
 		max-width: 900px;
@@ -2121,6 +2127,14 @@ ul.categories.open .mobile-cat-label {
 	position: relative;
 	min-height: 250px;
 	overflow: hidden;
+	padding-left: 0;
+	padding-right: 0;
+	.wrapper {
+		@include sm {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
 	.flex-viewport {
 		max-height: 100%!important;
 	}
@@ -2153,7 +2167,10 @@ ul.categories.open .mobile-cat-label {
 	}
 	ul.slides .middle {
 		text-align: center;
-		padding: 5% 12%;
+		padding: 10% 15%;
+		@include sm {
+			padding: 5% 12%;
+		}
 		p:first-child {
 			margin-top: 0;
 		}
@@ -2204,8 +2221,10 @@ ul.categories.open .mobile-cat-label {
 		@include flexbox-direction(row);
 	}
 	.info {
-		margin: 0 0;
+		margin: 0 0 30px;
+		width: 100%;
 		@include md {
+			margin: 0 0;
 			width: 33.333%;
 		}
 	}
@@ -2232,15 +2251,23 @@ ul.categories.open .mobile-cat-label {
 		overflow: hidden;
 	}
 	.text {
-		border-left: 1px solid #333;
-		height: 100%;
-		padding: 0 25px;
+		padding: 0 0 25px;
+		border-bottom: 1px solid #333;
+		@include md {
+			height: 100%;
+			padding: 0 25px;
+			border-bottom: none;
+			border-left: 1px solid #333;
+		}
 		p:last-child {
 			margin-bottom: 0;
 		}
 	}
 	.info.first .text {
 		border-left: none;
+	}
+	.info:last-child .text {
+		border-bottom: none;
 	}
 	.ctitle {
 		text-align: center;
@@ -2266,8 +2293,88 @@ ul.categories.open .mobile-cat-label {
 		background: #27251f;
 		color: #FFF;
 		font-size: 15px;
+		line-height: 1.2;
 		padding: 8px 15px;
 		text-align: center;
+	}
+	.jobs {
+		@include flexbox();
+		@include flexbox-wrap(wrap);
+		@include flexbox-direction(row);
+	}
+	.joblist {
+		background: #f1f1f1;
+		padding: 25px 25px;
+		width: 100%;
+		overflow: hidden;
+	}
+	.column2 {
+		.joblist {
+			width: 100%;
+			@include sm {
+				width: 50%;
+			}
+		}
+	}
+	.column3 {
+		.joblist {
+			width: 100%;
+			@include md {
+				width: 33.33%;
+			}
+		}
+	}
+	.column4, .column5, .column6 {
+		.joblist {
+			width: 100%;
+			@include sm {
+				width: 50%;
+				margin-bottom: 5px;
+			}
+			@include md {
+				width: 25%;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.joblist:nth-child(even) {
+		background: #e0e0e0;
+	}
+	.loc {
+		color: #27251f;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin: 0 0 10px;
+	}
+	ul.listings {
+		margin: 0 0;
+		padding: 0 0;
+		list-style: none;
+		li {
+			padding: 4px 0;
+			line-height: 1.1;
+		}
+		a {
+			text-decoration: none;
+			color: #27251f;
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 1.2;
+			.arrow {
+				display: inline-block;
+				position: relative;
+				top: 1px;
+				margin-right: 0;
+				@include transition(all ease .3s);
+			}
+			&:hover {
+				color: $color-lime;
+				.arrow {
+					transform: translateX(2px);
+				}
+			}
+
+		}
 	}
 }
 
