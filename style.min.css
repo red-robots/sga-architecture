@@ -2214,7 +2214,7 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .careers-content .pageheader span.sidehline{content:"";display:block;width:14%;height:2px;background:#93c90e;position:absolute;top:12px}
 .careers-content .pageheader span.sidehline.left{left:0}
 .careers-content .pageheader h1{margin:0;font-weight:300;font-size:20px;color:#FFF;line-height:1.2}
-.careers-content .site-main{font-size:16px;padding:40px 0 70px}
+.careers-content .site-main{font-size:16px;padding:40px 0 30px}
 .careers-content .intro{max-width:900px;width:100%;margin:0 auto;text-align:center;position:relative}
 .careers-content .intro:after{content:"";display:inline-block;max-width:150px;width:30%;height:2px;background:#93c90e;margin:30px auto 0}
 .midtitle{margin:35px 0 0;font-size:20px;font-weight:400;color:#93c90e;text-align:center;text-transform:uppercase;letter-spacing:1px}
@@ -2290,6 +2290,7 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .careers-bottom-articles .info.first .text{border-left:0}
 .careers-bottom-articles .info:last-child .text{border-bottom:0}
 .careers-bottom-articles .ctitle{text-align:center;text-transform:uppercase;font-weight:500;font-size:20px;color:#93c90e;line-height:1.3;margin:0 0 10px;padding:0 20px}
+.open-positions{margin-bottom:35px}
 .open-positions .section-title{background:#93c90e;color:#FFF;font-size:20px;font-weight:600;text-align:center;padding:5px 0}
 .open-positions .section-text{background:#27251f;color:#FFF;font-size:15px;line-height:1.2;padding:8px 15px;text-align:center}
 .open-positions .jobs{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
