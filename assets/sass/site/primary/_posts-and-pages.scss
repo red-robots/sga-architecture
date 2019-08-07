@@ -51,7 +51,7 @@ h2 {
 		padding: 15px;
 		overflow: hidden;
 		@include sm {
-			width: 33.333%;
+			width: 33.3%;
 		}
 	}
 	.link {
@@ -663,7 +663,7 @@ ul.sblocations li.first {
 		}
 		@media screen and (min-width: $deskwidth) {
 			// height: 230px;
-			width: 33.333%;
+			width: 33.29%;
 		}
 	}
 	.proj-image {
@@ -2423,7 +2423,7 @@ ul.categories.open .mobile-cat-label {
 		.col {
 			width: 100%;
 			@include sm {
-				width: 50%;
+				width: 49.95%;
 			}
 		}
 		.col.imagecol {
