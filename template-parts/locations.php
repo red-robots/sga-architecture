@@ -6,7 +6,7 @@ $args = array(
 );
 $locations = get_posts($args);
 if ( $locations ) {  ?>
-<div class="foot-title">Locations</div>
+<div class="foot-title" style="display:none;">Locations</div>
 <div class="locations">
 	<div class="flexrow clear">
 		<?php foreach ($locations as $e) { 

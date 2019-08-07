@@ -181,26 +181,36 @@ body {
 	font-weight: 400;
 	line-height: 1.5;
 	padding: 30px 0;
+	.flexbox {
+		@include flexbox();
+		@include flexbox-wrap(wrap);
+		@include flexbox-direction(row);
+		@include flexbox-align-items(center);
+	}
 	a {
 		color: #FFF;
 		text-decoration: none;
 	}
+	.col {
+		width: 100%;
+	}
 	.col.left {
-		@media screen and (min-width: $tabwidth) {
-			width: 50%;
-			float: left;
-		}
-		@media screen and (min-width: $midwidth) {
+		@include sm {
 			width: 65%;
 		}
 	}
 	.col.right {
-		@media screen and (min-width: $tabwidth) {
-			width: 40%;
-			float: right;
+		text-align: center;
+		@include sm {
+			text-align: right;
+			width: 35%;
 		}
-		@media screen and (min-width: $midwidth) {
-			width: 30%;
+		.wrap {
+			display: inline-block;
+			text-align: left;
+			@include sm {
+				float: right;
+			}
 		}
 	}
 	.foot-title {
@@ -265,11 +275,19 @@ body {
 		float: left;
 	}
 	.name {
+		display: block;
+		width: 100%;
 		color:  $color_lime;
 	}
 	.address {
+		display: block;
+		width: 100%;
 		font-style: normal;
 		margin: 0 0;
+	}
+	.telephone {
+		display: block;
+		width: 100%;
 	}
 	.flexrow {
 		@media screen and (min-width: $tabwidth) {

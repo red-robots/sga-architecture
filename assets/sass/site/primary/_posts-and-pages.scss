@@ -18,6 +18,11 @@ h2 {
 		min-height: 30em;
 		padding-bottom: 50px;
 	}
+	&.border-top {
+		padding-top: 0;
+		margin-top: 0;
+		border-top: 2px solid $color-lime;
+	}
 }
 .site-main {
 	font-size: 14px;
@@ -388,7 +393,7 @@ h2 {
 	}
 	li {
 		position: relative;
-		padding-left: 15px;
+		padding-left: 16px;
 		&:before {
 			content:"";
 			display: block;
@@ -396,7 +401,7 @@ h2 {
 			height: 7px;
 			background: $color_lime;
 			position: absolute;
-			top: 8px;
+			top: 9px;
 			left: 0;
 		}
 	}
@@ -406,6 +411,7 @@ h2 {
 	a {
 		color: $color_lime;
 		text-decoration: none;
+		font-size: 16px;
 		&:hover {
 			color: $color_grey;
 		}
@@ -2378,6 +2384,148 @@ ul.categories.open .mobile-cat-label {
 			}
 
 		}
+	}
+}
+
+.subpage-banner {
+	border-top: 2px solid $color-lime;
+	img {
+		width: 100%;
+		height: auto;
+		float: left;
+	}
+}
+.middle-content {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 50px 0;
+	text-align: center;
+	font-size: 18px;
+    font-weight: 400;
+}
+.page-template-page-about {
+	.site-content.wrapper {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.aboutpage {
+	.flexbox {
+		@include flexbox();
+		@include flexbox-wrap(wrap);
+		@include flexbox-direction(row);
+	}
+	.row3 {
+		background: $color-lime;
+		color: #FFF;
+		.col {
+			width: 100%;
+			@include sm {
+				width: 50%;
+			}
+		}
+		.col.imagecol {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: #909090;
+			img {
+				width: 100%;
+				height: auto;
+				float: left;
+				visibility: visible;
+				@include sm {
+					visibility: hidden;
+				}
+			}
+		}
+		.inside {
+			height: 100%;
+			@include flexbox();
+			@include flexbox-align-items(center);
+			@include flexbox-justify(center);
+			.text {
+				padding: 5% 10%;
+				font-size: 16px;
+				line-height: 1.6;
+				@include md {
+					padding: 10% 25% 10% 10%;
+				}
+			}
+		}
+	}
+	.bottom-articles {
+		padding: 70px 0;
+		.flexbox {
+			margin-left: -12px;
+			margin-right: -12px;
+			@include md {
+				margin-left: -20px;
+				margin-right: -20px;
+			}
+		}
+		.article {
+			width: 100%;
+			margin: 20px 0;
+			@include sm {
+				width: 33.33%;
+				margin: 0 0;
+			}
+		}
+		.inside {
+			padding: 0 12px;
+			@include md {
+				padding: 0 20px;
+			}
+		}
+		.feat-image {
+			border-bottom: 2px solid $color-lime;
+			padding-bottom: 25px;
+			margin-bottom: 18px;
+			width: 100%;
+			float: left;
+			img {
+				width: 100%;
+				height: auto;
+				float: left;
+			}
+		}
+		.description {
+			width: 100%;
+			float: left;
+			p:first-child {
+				margin-top: 0;
+			}
+			p {
+				margin-top: 15px;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+body.error404 {
+	.site-content.wrapper {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+	}
+	.entry-title {
+		margin-top: 35px;
+		margin-bottom: 0;
+		text-align: center;
+	}
+	p {
+		margin-top: 0;
+	}
+	.page-content, ul.linklist {
+		display: inline-block;
+	}
+	ul.linklist {
+		text-align: left;
 	}
 }
 

@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-<div id="primary" class="full-content-area default-temp">
-	<main id="main" class="site-main error404content clear" role="main">
+<div id="primary" class="full-content-area default-temp border-top">
+	<main id="main" class="site-main wrapper error404content clear" role="main">
 
 		<header class="page-header">
 			<h1 class="entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bellaworks' ); ?></h1>
