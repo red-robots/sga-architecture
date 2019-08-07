@@ -1882,11 +1882,11 @@ h2{font-size:25px;letter-spacing:1px}
 }.catflex .link{text-decoration:none;display:block;position:relative;width:100%;height:100%;overflow:hidden;background-color:#333}
 .catflex .link span{-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
 .catflex .link .bg{display:block;width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#909090}
-.catflex .link .bg:before{content:"";display:block;width:100%;height:100%;position:absolute;bottom:0;left:0;background:rgba(0,0,0,0.4);-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
+.catflex .link .bg:before{content:"";display:block;width:100%;height:100%;position:absolute;bottom:0;left:0;background:rgba(0,0,0,0.2);-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s}
 .catflex .link:hover .bg{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 .catflex .link:hover .bg:before{background:rgba(0,0,0,0.75)}
-.catflex img{width:100%;height:auto;visibility:hidden}
-.catflex .catname{display:block;z-index:10;position:absolute;bottom:0;left:0;width:100%;height:100%;color:#a4dc1b;box-sizing:border-box;padding:10px 15px;font-size:25px;text-transform:uppercase;text-align:center;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.catflex img{width:100%;height:auto;float:left;visibility:hidden}
+.catflex .catname{display:block;z-index:10;position:absolute;bottom:0;left:0;width:100%;height:100%;color:#a4dc1b;box-sizing:border-box;padding:10px 15px;font-size:25px;text-transform:uppercase;text-align:center;text-shadow:2px 2px 3px rgba(0,0,0,0.3);display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .slides-wrap{position:relative;height:300px}
 @media screen and (min-width:600px){.slides-wrap{height:400px}
 }@media screen and (min-width:900px){.slides-wrap{height:600px}

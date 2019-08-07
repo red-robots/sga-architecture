@@ -79,7 +79,7 @@ h2 {
 				position: absolute;
 				bottom: 0;
 				left: 0;
-				background: rgba(0,0,0,0.4);
+				background: rgba(0,0,0,0.2);
 				@include transition( all ease-in-out .3s);
 			}
 		}
@@ -95,6 +95,7 @@ h2 {
 	img {
 		width: 100%;
 		height: auto;
+		float: left;
 		visibility: hidden;
 	}
 	.catname {
@@ -111,6 +112,7 @@ h2 {
 		font-size: 25px;
 		text-transform: uppercase;
 		text-align: center;
+		text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
 		@include flexbox();
 		@include flexbox-justify(center);
 		@include flexbox-align-items(center);
