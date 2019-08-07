@@ -1662,8 +1662,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input
 select{border:1px solid #ccc}
 input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"]{padding:3px}
 textarea{padding-left:3px;width:100%}
-a{color:#0999f3}
-a:hover,a:focus,a:active{color:midnightblue}
+a{color:#7eaf07}
+a:hover,a:focus,a:active{color:#d4ea35}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
 .main-navigation{position:relative}
@@ -2329,7 +2329,9 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 }.aboutpage .row3 .inside{height:100%;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .aboutpage .row3 .inside .text{padding:5% 10%;font-size:16px;line-height:1.6}
 @media(min-width:900px){.aboutpage .row3 .inside .text{padding:10% 25% 10% 10%}
-}.aboutpage .bottom-articles{padding:70px 0}
+}.aboutpage .row3 .inside .text a{color:#f3e959}
+.aboutpage .row3 .inside .text a:hover{color:#f3efbb}
+.aboutpage .bottom-articles{padding:70px 0}
 .aboutpage .bottom-articles .flexbox{margin-left:-12px;margin-right:-12px}
 @media(min-width:900px){.aboutpage .bottom-articles .flexbox{margin-left:-20px;margin-right:-20px}
 }.aboutpage .bottom-articles .article{width:100%;margin:20px 0}
