@@ -2534,8 +2534,9 @@ ul.categories.open .mobile-cat-label {
 		@include flexbox();
 		@include flexbox-wrap(wrap);
 		@include flexbox-direction(row);
-		width: 100%;
-		float: left;
+	}
+	.svrow:focus {
+		outline: none;
 	}
 	.fbox {
 		@include md {
