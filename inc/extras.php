@@ -446,3 +446,15 @@ function getElementsByClassName($dom, $ClassName, $tagName=null) {
   return $Matched;
 }
 
+/* Hide Editor on Specific page */
+// add_action( 'admin_init', 'hide_editor' );
+// function hide_editor() {
+//   $post_id = ( isset($_GET['post']) && $_GET['post'] ) ? $_GET['post'] : '' ;
+//   if($post_id) {
+//     $pagetitle = get_the_title($post_id);
+//     if($pagetitle=='Services'){ 
+//       remove_post_type_support('page', 'editor');
+//     }
+//   }
+// }
+
