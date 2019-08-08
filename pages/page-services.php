@@ -15,28 +15,28 @@ get_header(); ?>
 				<?php $i=1; foreach ($services as $s) { 
 					$class = ($i%2) ? 'even':'odd'; 
 					$info = $s['content'];
-					if($info) { 
-						$title = $info->post_title;
+					$page_title = ($info) ? $info->post_title:'';
+					$title = ($s['custom_title']) ? $s['custom_title'] : $page_title;
+					if($info && $title) { 
 						$id = $info->ID;
 						$text = $info->post_content;
 						$text = apply_filters('the_content',$text);
 						$thumbId = get_post_thumbnail_id($id);
 						$img = wp_get_attachment_image_src($thumbId,'full');
-						$style = ($img) ? ' style="background-image:url('.$img[0].')"':'';
-					?>
-					<div class="svrow <?php echo $class ?>">
-						<h3 class="title"><span><?php echo $title ?></span></h3>
-						<div class="flexbox">
-							<div class="fbox imagecol"<?php echo $style ?>>
-								<?php if ($img) { ?>
-									<img src="<?php echo $img[0] ?>" alt="" />
-								<?php } ?>
+						$style = ($img) ? ' style="background-image:url('.$img[0].')"':''; ?>
+						<div class="svrow <?php echo $class ?>">
+							<h3 class="title"><span><?php echo $title ?></span></h3>
+							<div class="flexbox">
+								<div class="fbox imagecol"<?php echo $style ?>>
+									<?php if ($img) { ?>
+										<img src="<?php echo $img[0] ?>" alt="" />
+									<?php } ?>
+								</div>
+								<div class="fbox textcol">
+									<div class="text"><?php echo $text; ?></div>
+								</div>
 							</div>
-							<div class="fbox textcol">
-								<div class="text"><?php echo $text; ?></div>
-							</div>
-						</div>
-					</div>	
+						</div>	
 					<?php } ?>
 				<?php $i++; } ?>
 			</div>	
