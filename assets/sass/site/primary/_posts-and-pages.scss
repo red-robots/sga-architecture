@@ -1590,6 +1590,9 @@ ul.categories.open .mobile-cat-label {
 			display: none;
 		}
 	}
+	ul.cats li:hover > a {
+		color: $color-lime;
+	}
 }
 .careers-main-navigation {
 	max-width: 280px;
