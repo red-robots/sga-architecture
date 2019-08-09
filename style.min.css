@@ -2319,6 +2319,8 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .subpage-banner{border-top:2px solid #93c90e}
 .subpage-banner img{width:100%;height:auto;float:left}
 .middle-content{max-width:1000px;width:100%;margin:0 auto;padding:50px 0;text-align:center;font-size:18px;font-weight:400}
+.middle-content p a{color:#7fb302;text-decoration:none}
+.middle-content p a:hover{color:#c2d208}
 .page-template-page-about .site-content.wrapper{max-width:100%;padding-left:0;padding-right:0}
 .aboutpage .flexbox{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .aboutpage .row3{background:#93c90e;color:#FFF}
@@ -2330,7 +2332,7 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 }.aboutpage .row3 .inside{height:100%;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .aboutpage .row3 .inside .text{padding:5% 10%;font-size:16px;line-height:1.6}
 @media(min-width:900px){.aboutpage .row3 .inside .text{padding:10% 25% 10% 10%}
-}.aboutpage .row3 .inside .text a{color:#f3e959}
+}.aboutpage .row3 .inside .text a{color:#fff348;text-decoration:none}
 .aboutpage .row3 .inside .text a:hover{color:#f3efbb}
 .aboutpage .bottom-articles{padding:70px 0}
 .aboutpage .bottom-articles .flexbox{margin-left:-12px;margin-right:-12px}
@@ -2344,6 +2346,8 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .aboutpage .bottom-articles .description{width:100%;float:left}
 .aboutpage .bottom-articles .description p:first-child{margin-top:0}
 .aboutpage .bottom-articles .description p{margin-top:15px;margin-bottom:0}
+.aboutpage .bottom-articles .description p a{color:#7fb302;text-decoration:none}
+.aboutpage .bottom-articles .description p a:hover{color:#c2d208}
 .page-template-page-services .site-content.wrapper{max-width:100%;padding:0}
 .services-info .title{background-color:#93c90e;text-transform:uppercase;font-size:23px;font-weight:300;line-height:1.2;text-align:center;color:#FFF;padding:10px 20px;margin:0}
 .services-info .flexbox{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}

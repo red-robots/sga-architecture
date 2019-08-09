@@ -2407,6 +2407,13 @@ ul.categories.open .mobile-cat-label {
 	text-align: center;
 	font-size: 18px;
     font-weight: 400;
+    p a {
+    	color: #7fb302;
+    	text-decoration: none;
+    	&:hover {
+    		color: #c2d208;
+    	}
+    }
 }
 .page-template-page-about {
 	.site-content.wrapper {
@@ -2458,7 +2465,8 @@ ul.categories.open .mobile-cat-label {
 					padding: 10% 25% 10% 10%;
 				}
 				a {
-					color: #f3e959;
+					color: #fff348;
+					text-decoration: none;
 					&:hover {
 						color: #f3efbb;
 					}
@@ -2512,6 +2520,13 @@ ul.categories.open .mobile-cat-label {
 				margin-top: 15px;
 				margin-bottom: 0;
 			}
+			p a {
+		    	color: #7fb302;
+		    	text-decoration: none;
+		    	&:hover {
+		    		color: #c2d208;
+		    	}
+		    }
 		}
 	}
 }
