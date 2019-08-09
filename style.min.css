@@ -1891,7 +1891,7 @@ h2{font-size:25px;letter-spacing:1px}
 .catflex .link:hover .bg{-webkit-transform:scale(1.1);-ms-transform:scale(1.1);transform:scale(1.1)}
 .catflex .link:hover .bg:before{background:rgba(0,0,0,0.75)}
 .catflex img{width:100%;height:auto;float:left;visibility:hidden}
-.catflex .catname{display:block;z-index:10;position:absolute;bottom:0;left:0;width:100%;height:100%;color:#a4dc1b;box-sizing:border-box;padding:10px 15px;font-size:25px;text-transform:uppercase;text-align:center;text-shadow:2px 2px 3px rgba(0,0,0,0.3);display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.catflex .catname{display:block;z-index:10;position:absolute;bottom:0;left:0;width:100%;height:100%;color:#a4dc1b;box-sizing:border-box;padding:10px 15px;font-size:25px;text-transform:uppercase;text-align:center;text-shadow:0 2px 5px rgba(0,0,0,0.6);display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .slides-wrap{position:relative;height:300px}
 @media screen and (min-width:600px){.slides-wrap{height:400px}
 }@media screen and (min-width:900px){.slides-wrap{height:600px}
