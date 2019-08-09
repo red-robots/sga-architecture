@@ -17,8 +17,8 @@
 				$pname = $p->post_title;
 				$slug = $p->post_name;
 				//$link = get_term_link($cat); 
-				$link = get_permalink($id);
-				//$link = get_site_url() . '/services/#' . $slug;
+				//$link = get_permalink($id);
+				$link = get_site_url() . '/services/#' . $slug;
 				?>
 				<li><a href="<?php echo $link ?>"><?php echo $pname; ?></a></li>
 			<?php } ?>
