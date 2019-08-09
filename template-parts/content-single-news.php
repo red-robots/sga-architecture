@@ -19,7 +19,7 @@
 		?>
 
 		<?php if ( $pImg ) { ?>
-		<div class="single-post-Image"><?php the_post_thumbnail(); ?></div>
+		<div class="single-post-Image" style="display:none;"><?php the_post_thumbnail(); ?></div>
 		<?php } ?>
 
 		<div class="post-content">
