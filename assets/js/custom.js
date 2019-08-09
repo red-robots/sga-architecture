@@ -216,6 +216,10 @@ jQuery(document).ready(function ($) {
 		) {
 		  // Figure out element to scroll to
 		  var headerHeight = parseInt($('#masthead .top-info').outerHeight());
+		  var offSet = 0;
+		  if( $("#wpadminbar").length ) {
+		  		offSet = parseInt($('#wpadminbar').outerHeight());
+		  }
 		  var target = $(this.hash);
 		  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 		  // Does a scroll target exist?
@@ -223,7 +227,7 @@ jQuery(document).ready(function ($) {
 		    // Only prevent default if animation is actually gonna happen
 		    //event.preventDefault();
 		    $('html, body').animate({
-		      scrollTop: target.offset().top
+		      scrollTop: target.offset().top - offSet
 		    }, 1000, function() {
 		      // Callback after animation
 		      // Must change focus!
@@ -245,10 +249,14 @@ jQuery(document).ready(function ($) {
         var xhash = location.hash;
         var target = $(xhash);
         var offsetHeight = $('#masthead .top-info').outerHeight();
+		var offSet = 0;
+		if( $("#wpadminbar").length ) {
+			offSet = parseInt($('#wpadminbar').outerHeight());
+		}
         if (target.length) {
 
           $('html, body').animate({
-            scrollTop: target.offset().top
+            scrollTop: target.offset().top - offSet
           }, 1000, function() {
             var $target = $(target);
             //$target.focus();
