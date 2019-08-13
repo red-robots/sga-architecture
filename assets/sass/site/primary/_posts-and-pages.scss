@@ -56,7 +56,7 @@ h2 {
 		overflow: hidden;
 		width: 100%;
 		@include xxs {
-			width: 49.89%;
+			width: 49.8%;
 		}
 		@include sm {
 			padding: 15px;
@@ -667,7 +667,7 @@ ul.sblocations li.first {
 		padding: 10px;
 		@include transition(all ease-in-out .3s);
 		@include xxs {
-			width: 49.89%;
+			width: 49.8%;
 			margin: 0 0;
 		}
 		@include sm {
