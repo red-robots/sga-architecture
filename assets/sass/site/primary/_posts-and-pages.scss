@@ -60,7 +60,7 @@ h2 {
 		}
 		@include sm {
 			padding: 15px;
-			width: 33.3%;
+			width: 33%;
 		}
 	}
 	.link {
@@ -131,6 +131,9 @@ h2 {
 		@include flexbox-justify(center);
 		@include flexbox-align-items(center);
 		@include sm {
+			font-size: 18px;
+		}
+		@include md {
 			font-size: 25px;
 		}
 	}
@@ -671,7 +674,7 @@ ul.sblocations li.first {
 			margin: 0 0;
 		}
 		@include sm {
-			width: 33.29%;
+			width: 33%;
 		}
 	}
 	.proj-image {
