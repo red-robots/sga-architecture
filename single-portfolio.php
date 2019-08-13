@@ -20,6 +20,13 @@ get_header(); ?>
 			$post_id = get_the_ID();
 			$post_thumbnail_id = get_post_thumbnail_id( $post_id );
 			$img = wp_get_attachment_image_src($post_thumbnail_id,'medium_large'); 
+			$altTxt = '';
+			if($img) {
+				//$altTxt = trim( strip_tags( get_post_meta( $post_thumbnail_id, '_wp_attachment_image_alt', true ) ) );
+				$altTxt = trim(get_the_title($post_thumbnail_id));
+			}
+			$img2 = wp_get_attachment_image($post_thumbnail_id,'full','',array('class'=>'ssimage mainpic','alt'=>$altTxt));
+			
 			$galleries = get_field('gallery');
 			$location = get_field('location');
 			$client = get_field('client');
@@ -35,15 +42,26 @@ get_header(); ?>
 							<?php if ($img) { ?>
 							<li class="slide main">
 								<div style="display:none;" class="ps-image" style="background-image:url('<?php echo $img[0];?>')"></div>
-								<img class="ssimage mainpic" src="<?php echo $img[0];?>" alt="" />
+								<span class="span-image">
+									<?php echo $img2 ?>
+									<?php if ($altTxt) { ?>
+									<span class="imagetitle"><span class="span"><?php echo $altTxt ?></span></span>
+									<?php } ?>
+								</span>
 							</li>	
 							<?php } ?>
 							<?php if ($galleries) { ?>
-								<?php foreach ($galleries as $g) { ?>
-								<li class="slide gallery">
-									<img class="ssimage" src="<?php echo $g['url'];?>" alt="<?php echo $g['title'];?>" />
-									<div style="display:none;" class="ps-image" style="background-image:url('<?php echo $g['url'];?>')"></div>
-								</li>
+								<?php foreach ($galleries as $g) { 
+									$image_title = $g['title'];
+									$image_src = $g['url'];
+									?>
+									<li class="slide gallery">
+										<div style="display:none;" class="ps-image" style="background-image:url('<?php echo $g['url'];?>')"></div>
+										<span class="span-image">
+											<img class="ssimage" src="<?php echo $image_src;?>" alt="<?php echo $image_title;?>" />
+											<span class="imagetitle"><span class="span"><?php echo $image_title ?></span></span>
+										</span>
+									</li>
 								<?php } ?>	
 							<?php } ?>
 						</ul>

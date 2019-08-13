@@ -83,15 +83,18 @@
 		@media screen and (min-width: $midwidth) {
 			font-size: 14px;
 		}
-		&:hover {
-			color: $color_grey;
-			@media screen and (min-width: $tabwidth) {
-				color: $color_lime;
-			}
-		}
+		// &:hover {
+		// 	color: $color_grey;
+		// 	@media screen and (min-width: $tabwidth) {
+		// 		color: $color_lime;
+		// 	}
+		// }
 	}
 	.menu > li:hover > a {
-		
+		color: #cae091;
+		@media screen and (min-width: $tabwidth) {
+			color: $color_lime;
+		}
 	}
 	.menu > li:first-child > a {
 		@media screen and (min-width: $tabwidth) {
@@ -102,7 +105,7 @@
 	}
 	li.current-menu-item:hover > a,
 	li.current-menu-item > a {
-		color: $color_grey;
+		color: #353535;
 		@media screen and (min-width: $tabwidth) {
 			color: $color_lime;
 		}
