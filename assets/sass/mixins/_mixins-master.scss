@@ -1,6 +1,7 @@
 // $tabwidth: 600px;
 // $midwidth: 900px;
 // $deskwidth: 1200px;
+@mixin xxs { @media (min-width: $xxswidth) { @content; } }
 @mixin xs { @media (min-width: $xswidth) { @content; } }
 @mixin sm { @media (min-width: $tabwidth) { @content; } }
 @mixin md { @media (min-width: $midwidth) { @content; } }
