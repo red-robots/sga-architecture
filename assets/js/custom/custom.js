@@ -271,4 +271,14 @@ jQuery(document).ready(function ($) {
       }       
   });
 
+	var highestBox = 0;
+	$(".careers-bottom-articles .ctitle").each(function(){
+		if($(this).height() > highestBox) {
+          highestBox = $(this).height(); 
+        }
+	});
+
+	$(".careers-bottom-articles .ctitle").css("height",highestBox+"px");
+
+
 });// END #####################################    END
