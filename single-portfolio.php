@@ -45,7 +45,7 @@ get_header(); ?>
 								<span class="span-image">
 									<?php echo $img2 ?>
 									<?php if ($altTxt) { ?>
-									<span class="imagetitle"><span class="span"><?php echo $altTxt ?></span></span>
+									<span class="imagetitle" style="display:none;"><span class="span"><?php echo $altTxt ?></span></span>
 									<?php } ?>
 								</span>
 							</li>	
@@ -59,7 +59,7 @@ get_header(); ?>
 										<div style="display:none;" class="ps-image" style="background-image:url('<?php echo $g['url'];?>')"></div>
 										<span class="span-image">
 											<img class="ssimage" src="<?php echo $image_src;?>" alt="<?php echo $image_title;?>" />
-											<span class="imagetitle"><span class="span"><?php echo $image_title ?></span></span>
+											<span class="imagetitle" style="display:none;"><span class="span"><?php echo $image_title ?></span></span>
 										</span>
 									</li>
 								<?php } ?>	
