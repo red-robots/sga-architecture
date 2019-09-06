@@ -4,7 +4,9 @@
  *
  */
 include( get_template_directory() . '/inc/simple_html_dom.php');
-get_header('careers'); ?>
+//get_header('careers');
+get_header(); 
+?>
 <div id="primary" class="full-content-area careers-content">
 	<?php  
 	$placeholder = get_field('video_thumbnail');
