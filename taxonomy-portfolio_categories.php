@@ -41,6 +41,12 @@ $args = array(
 			<?php get_template_part('template-parts/portfolio-categories'); ?>
 		</div>
 		<div class="col-right">
+			<?php
+				$catID = get_the_category();
+				if( category_description( $current_term_id ) ) {
+					the_archive_description( '<div class="taxonomy-description">', '</div>' ); 
+				}
+			?>
 			<?php get_template_part('template-parts/content','portfolio') ?>
 		</div>
 	</main><!-- #main -->

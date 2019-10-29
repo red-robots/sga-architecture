@@ -2648,6 +2648,12 @@ ul.categories.open .mobile-cat-label {
 		}
 	}
 }
+.taxonomy-description {
+	margin-top: 0;
+	@include md {
+		margin-top: 25px;
+	}
+}
 
 body.error404 {
 	.site-content.wrapper {

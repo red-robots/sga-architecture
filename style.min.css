@@ -2373,6 +2373,8 @@ ul.categories.open .mobile-cat-label{margin-bottom:15px}
 .services-info .textcol p{margin-top:16px;margin-bottom:0}
 @media(min-width:900px){.services-info .svrow.odd .imagecol{-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%)}
 }@media(min-width:900px){.services-info .svrow.odd .textcol{-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%)}
+}.taxonomy-description{margin-top:0}
+@media(min-width:900px){.taxonomy-description{margin-top:25px}
 }body.error404 .site-content.wrapper{max-width:100%;padding-left:0;padding-right:0;text-align:center}
 body.error404 .entry-title{margin-top:35px;margin-bottom:0;text-align:center}
 body.error404 p{margin-top:0}
