@@ -1896,7 +1896,7 @@ h2{font-size:25px;letter-spacing:1px}
 .catflex .catname{display:block;z-index:10;position:absolute;bottom:0;left:0;width:100%;height:100%;color:#a4dc1b;box-sizing:border-box;padding:10px 15px;font-size:18px;text-transform:uppercase;text-align:center;text-shadow:0 2px 5px rgba(0,0,0,0.6);display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 @media(min-width:600px){.catflex .catname{font-size:18px}
 }@media(min-width:900px){.catflex .catname{font-size:25px}
-}.slides-wrap{position:relative;height:300px}
+}.slides-wrap{position:relative;height:300px;overflow:hidden}
 @media screen and (min-width:600px){.slides-wrap{height:400px}
 }@media screen and (min-width:900px){.slides-wrap{height:600px}
 }@media screen and (min-width:1200px){.slides-wrap{height:660px}

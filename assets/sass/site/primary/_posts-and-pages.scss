@@ -142,6 +142,7 @@ h2 {
 .slides-wrap {
 	position: relative;
 	height: 300px;
+	overflow: hidden;
 	@media screen and (min-width: $tabwidth) {
 		height: 400px;
 	}
