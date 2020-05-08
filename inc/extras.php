@@ -458,3 +458,53 @@ function hide_editor() {
   }
 }
 
+function parse_external_url( $url = '', $internal_class = 'internal-link', $external_class = 'external-link') {
+
+    $url = trim($url);
+
+    // Abort if parameter URL is empty
+    if( empty($url) ) {
+        return false;
+    }
+
+    //$home_url = parse_url( $_SERVER['HTTP_HOST'] );     
+    $home_url = parse_url( home_url() );  // Works for WordPress
+
+    $target = '_self';
+    $class = $internal_class;
+
+    if( $url!='#' ) {
+        if (filter_var($url, FILTER_VALIDATE_URL)) {
+
+            $link_url = parse_url( $url );
+
+            // Decide on target
+            if( empty($link_url['host']) ) {
+                // Is an internal link
+                $target = '_self';
+                $class = $internal_class;
+
+            } elseif( $link_url['host'] == $home_url['host'] ) {
+                // Is an internal link
+                $target = '_self';
+                $class = $internal_class;
+
+            } else {
+                // Is an external link
+                $target = '_blank';
+                $class = $external_class;
+            }
+        } 
+    }
+
+    // Return array
+    $output = array(
+        'class'     => $class,
+        'target'    => $target,
+        'url'       => $url
+    );
+
+    return $output;
+}
+
+
