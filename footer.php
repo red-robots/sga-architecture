@@ -32,7 +32,7 @@
 						<?php if ($email) { ?>
 						<div class="enquiry-email"><a href="mailto:<?php echo antispambot($email,1) ?>"><?php echo antispambot($email) ?></a></div>	
 						<div class="enquiry-email bw">
-							<a href="https://bellaworksweb.com">site by BW</a>
+							<a href="https://bellaworksweb.com" target="_blank">site by BW</a>
 						</div>
 						<?php } ?>
 					</div>
