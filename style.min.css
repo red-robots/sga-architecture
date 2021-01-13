@@ -1364,6 +1364,8 @@ body{background:#27251f}
 .site-footer .social-links a.first{margin-left:0}
 .site-footer .enquiry-email{text-align:center;margin-top:10px}
 .site-footer .enquiry-email a{color:#93c90e;font-size:14px}
+.site-footer .enquiry-email.bw{text-align:left}
+.site-footer .enquiry-email.bw a{font-size:10px}
 .locations-list .locations{width:100%;float:left}
 .locations-list .name{display:block;width:100%;color:#93c90e}
 .locations-list .address{display:block;width:100%;font-style:normal;margin:0}

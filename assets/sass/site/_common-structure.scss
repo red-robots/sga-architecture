@@ -280,6 +280,12 @@ body {
 			color: $color_lime;
 			font-size: 14px;
 		}
+		&.bw {
+			text-align: left;
+			a {
+				font-size: 10px;
+			}
+		}
 	}
 }
 
