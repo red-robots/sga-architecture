@@ -198,12 +198,26 @@ body {
 		@include sm {
 			width: 65%;
 		}
+		@include md {
+			width: 65%;
+		}
+		@include lg {
+			width: 75%;
+		}
 	}
 	.col.right {
 		text-align: center;
 		@include sm {
 			text-align: right;
 			width: 35%;
+		}
+		@include md {
+			text-align: right;
+			width: 35%;
+		}
+		@include lg {
+			text-align: right;
+			width: 25%;
 		}
 		.wrap {
 			display: inline-block;
@@ -284,6 +298,21 @@ body {
 		width: 100%;
 		font-style: normal;
 		margin: 0 0;
+		&.with-chev {
+			position: relative;
+			svg {
+				width: 10px;
+				position: absolute;
+				right: -5px;
+				top: 35%;
+				transition: all ease .2s;
+			}
+			&:hover {
+				svg {
+					right: -15px;
+				}
+			}
+		}
 	}
 	.telephone {
 		display: block;
@@ -303,9 +332,15 @@ body {
 			width: 50%;
 			padding: 0 15px 15px;
 			text-align: left;
+			margin-bottom: 20px;
 		}
 		@media screen and (min-width: $midwidth) {
-			width: 24.95%;
+			// width: 24.95%;
+			width: 32.95%;
+			padding: 0 15px;
+		}
+		@media screen and (min-width: $deskwidth) {
+			width: 19.95%;
 			padding: 0 15px;
 		}
 	}

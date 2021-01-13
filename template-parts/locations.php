@@ -14,6 +14,8 @@ if ( $locations ) {  ?>
 		$loc = $e->post_title;
 		$address = get_field('address',$p_id);
 		$telephone = get_field('phone',$p_id);
+		$link = get_field('off_site_link',$p_id);
+		$linkText = get_field('off_site_link_text',$p_id);
 		?>
 		<div class="loc flexbox">
 			<?php if ($loc) { ?>
@@ -21,6 +23,11 @@ if ( $locations ) {  ?>
 			<?php } ?>
 			<?php if ($address) { ?>
 			<address class="address"><?php echo $address ?></address>	
+			<?php } ?>
+			<?php if ($link) { ?>
+			<address class="address with-chev">
+				<a href="<?php echo $link; ?>" target="_blank"><?php echo $linkText; ?> <i class="fas fa-chevron-right"></i></a>
+			</address>	
 			<?php } ?>
 			<?php if ($telephone) { ?>
 			<div class="telephone"><a href="tel:<?php echo format_phone_number($telephone); ?>"><?php echo $telephone ?></a></div>	
